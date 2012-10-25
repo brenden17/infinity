@@ -4,7 +4,6 @@ Created on 2012. 10. 10.
 @author: Brenden
 
 '''
-te
 import unittest
 import threading
     
