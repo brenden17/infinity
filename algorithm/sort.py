@@ -3,7 +3,7 @@
 '''
 import unittest
 import threading
-    
+
 def locknrelease(threading):
     def _locknrelease(func):
         def __locknrelease(*args, **kwargs):
@@ -63,7 +63,7 @@ def selection_sort(l):
     return l
 
 def insertion_sort(l):
-    n = len(l)
+    n = len(l)#        avl.display()  
     for i in range(1, n):
         for j in range(i, 0, -1):
             if l[j-1] > l[j]:
