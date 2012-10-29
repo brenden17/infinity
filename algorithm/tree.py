@@ -2,15 +2,19 @@
 @author: Brenden
 '''
 import unittest
-    
+from collections import deque
+
 class BinaryHeap(object):
     def __init__(self):
         self.l = [None]
         self.n = 0
         
+    def swap(self, l, k):
+        self.l[l], self.l[k] = self.l[k], self.l[l]
+        
     def swim(self, k):
         while k > 1 and self.l[k] < self.l[k/2]:
-            self.l[k], self.l[k/2] = self.l[k/2], self.l[k]
+            self.swap(k, k/2)
             k = k/2
                 
     def sink(self, k):
@@ -20,7 +24,7 @@ class BinaryHeap(object):
                 j = j + 1
             if self.l[k] < self.l[j]:
                 break
-            self.l[k], self.l[j] = self.l[j], self.l[k]
+            self.swap(k, j)
             k = j
 
     def insert(self, item):
@@ -30,7 +34,7 @@ class BinaryHeap(object):
         
     def delmax(self):
         m = self.l[1]
-        self.l[1], self.l[self.n] = self.l[self.n], self.l[1]
+        self.swap(1, self.n)
         self.l.pop()
         self.n = len(self.l) - 1
         self.sink(1)
@@ -54,7 +58,7 @@ class HeapSort(BinaryHeap):
     def sortdown(self):
         """step 2 - """
         while self.n > 0:
-            self.l[1], self.l[self.n] = self.l[self.n], self.l[1]
+            self.swap(1, self.n)
             self.nl.append(self.l.pop())
             
             self.n = len(self.l) - 1
@@ -83,6 +87,16 @@ class Node(object):
     
     def __gt__(self, other):
         return self.key > other.key
+    
+    def compare(self, key):
+        """each node can have own compare method"""
+        if self.key > key:
+            return 1
+        elif self.key < key:
+            return -1
+        else:
+            return 0
+            
         
 class BinarySearchTree(object):
     def __init__(self):
@@ -101,7 +115,8 @@ class BinarySearchTree(object):
     def insert(self, node, key, value):
         if node == None:
             return Node(key, value)
-        if node.key > key:
+        
+        if node.compare(key) > 0:
             node.left = self.insert(node.left, key, value)
         else:
             node.right = self.insert(node.right, key, value)
@@ -117,9 +132,9 @@ class BinarySearchTree(object):
         
         node = self.root
         while True:
-            if node.key == key:
+            if node.compare(key) == 0:
                 return node.value
-            elif node.key > key:
+            elif node.compare(key) > 0:
                 if not node.left:
                     return None
                 node = node.left
@@ -167,9 +182,9 @@ class BinarySearchTree(object):
     def _delete(self, node, key):
         if node == None:
             return None
-        if node.key > key:
+        if node.compare(key) > 0:
             self._delete(node.left, key)
-        elif node.key < key:
+        elif node.compare(key) < 0:
             self._delete(node.right, key)
         else:
             if node.right == None:
@@ -187,6 +202,24 @@ class BinarySearchTree(object):
     
     def delete(self, key):
         self.root = self._delete(self.root, key)
+    
+    def depth_first_search(self, node):
+        if not node:
+            return None
+        if node.left:
+            self.depth_first_search(node.left)
+        if node.right:
+            self.depth_first_search(node.right)
+    
+    def breadth_search(self):
+        queue = deque()
+        queue.append(self.root)
+        while queue:
+            node = queue.popleft()
+            if node.left:
+                queue.append(node.left)
+            if node.right:
+                queue.append(node.right)
     
     def _display(self, node, graph):
         if not node:
@@ -207,11 +240,11 @@ class BinarySearchTree(object):
             graph.add_edge(graph[str(node.key)], graph[str(node.left.key)], stroke=(0, 0, 0, 0.6))
             self._display(node.left, graph)
             
-    def display(self):
+    def display(self, name='default'):
         from pattern.graph import Graph, export
         graph = Graph()
         self._display(self.root, graph)
-        export(graph, 'avl', directed=True, weight=0.6, distance=6)
+        export(graph, name, directed=True, weight=0.6, distance=6)
             
 RED, BLACK = True, False
 class RBNode(Node):
@@ -258,7 +291,7 @@ class RedBlackBST(BinarySearchTree):
 #        print 'key ', key
         if node == None:
             return RBNode(key, value)
-        if node.key > key:
+        if node.compare(key) > 0:
             node.left = self.insert(node.left, key, value)
         else:
             node.right = self.insert(node.right, key, value)
@@ -269,7 +302,7 @@ class RedBlackBST(BinarySearchTree):
 #            print 'rotate_left'
             node = self.rotate_left(node)
         if self.is_red(node.left) and self.is_red(node.left.left):
-#            print 'rotate_right' bst.get(3)
+#            print 'rotate_right'
             node = self.rotate_right(node)
         if self.is_red(node.right) and self.is_red(node.left):
 #            print 'flip_color'
@@ -302,7 +335,7 @@ class AVLTree(BinarySearchTree):
 #        print 'key ', key
         if node == None:
             return Node(key, value)
-        if node.key > key:
+        if node.compare(key) > 0:
             node.left = self.insert(node.left, key, value)
         else:
             node.right = self.insert(node.right, key, value)
@@ -337,6 +370,146 @@ class AVLTree(BinarySearchTree):
         node.height = self.depth(node)
         return node
     
+class TwoThreeNode(object):
+    def __init__(self, key=None, value=None, count=1):
+        self.key = [key]
+        self.value = value
+        self.right = None
+        self.middle = None
+        self.middle_tmp = None
+        self.left = None
+        self.merge = False  
+        self.count = count
+    
+    def add_key(self, key):
+        self.key.append(key)
+        self.key = sorted(self.key)
+    
+    def compare(self, key):
+        if len(self.key) == 1:
+            if self.key[0] > key:
+                return 1
+            elif self.key[0] < key:
+                return -1
+            else:
+                return 0
+        elif len(self.key) == 2:
+            if self.key[1] > key:
+                return 1
+            elif self.key[0] < key and key < self.key[1] :
+                return 0
+            elif self.key[0] < key:
+                return -1
+        else:
+            return 0
+    
+    def is_any_children(self):
+        return any((self.left, self.middle, self.right))
+    
+    def is_full(self):
+        return True if len(self.key) == 3 else False
+        
+class TwoThreeSearchTree(BinarySearchTree):
+    def __init__(self):
+        self.root = None
+    
+    def insert(self, node, key, value):
+        if not node:
+            return TwoThreeNode(key, value)
+        
+        if not node.is_any_children():
+            node.add_key(key)
+            if node.is_full():
+                l, m, h = node.key
+                node.key = []
+                node.key.append(m)
+                node.merge = True
+                node.left = TwoThreeNode(l, value)
+                node.right = TwoThreeNode(h, value)
+            return node
+        
+        if node.compare(key) > 0:
+            node.left = self.insert(node.left, key, value)
+            if node.left.merge:
+                node.add_key(node.left.key[0])
+                if node.middle:
+                    node.middle_tmp = node.left.right
+                else:
+                    node.middle = node.left.right
+                node.left = node.left.left
+                
+        elif node.compare(key) < 0:
+            node.right = self.insert(node.right, key, value)
+            if node.right.merge:
+                node.add_key(node.right.key[0])
+                if node.middle:
+                    node.middle_tmp = node.right.left
+                else:
+                    node.middle = node.right.left
+                node.right = node.right.right
+        else:
+            node.middle = self.insert(node.middle, key, value)
+            if node.middle.merge:
+                node.add_key(node.middle.key[0])
+                node.middle_tmp = node.middle.right
+                node.middle = node.middle.left
+            
+        if node.is_full():
+            l, m, h = node.key
+            node.key = []
+            node.add_key(m)
+            node.merge = False
+            
+            tmp_left = node.left
+            tmp_middle1 = node.middle if node.middle.key < node.middle_tmp.key else node.middle_tmp
+            tmp_middle2 = node.middle_tmp if node.middle.key < node.middle_tmp.key else node.middle
+            tmp_right = node.right
+            
+            node.left = TwoThreeNode(l, value)
+            node.left.left = tmp_left
+            node.left.right = tmp_middle1
+            node.right = TwoThreeNode(h, value)
+            node.right.left = tmp_middle2
+            node.right.right = tmp_right
+            node.middle = None
+            node.middle_tmp = None
+        
+        return node
+    
+    def put(self, key, value):
+        self.root = self.insert(self.root, key, value)
+            
+    def _display(self, node, graph):
+        if not node:
+            return None
+        
+        if str(node.key) not in graph:
+            graph.add_node(str(node.key), radius=10, stroke=(0, 0, 0, 0.8))
+            
+        if node.right:
+            if str(node.right.key) not in graph:
+                graph.add_node(str(node.right.key), radius=10, stroke=(0, 0, 0, 0.8))
+            graph.add_edge(graph[str(node.key)], graph[str(node.right.key)], stroke=(0, 0, 0, 0.6))
+            self._display(node.right, graph)
+        
+        if node.middle:
+            if str(node.middle.key) not in graph:
+                graph.add_node(str(node.middle.key), radius=10, stroke=(0, 0, 0, 0.8))
+            graph.add_edge(graph[str(node.key)], graph[str(node.middle.key)], stroke=(0, 0, 0, 0.6))
+            self._display(node.middle, graph)
+        
+        if node.middle_tmp:
+            if str(node.middle_tmp.key) not in graph:
+                graph.add_node(str(node.middle_tmp.key), radius=10, stroke=(0, 0, 0, 0.8))
+            graph.add_edge(graph[str(node.key)], graph[str(node.middle_tmp.key)], stroke=(0, 0, 0, 0.6))
+            self._display(node.middle_tmp, graph)
+            
+        if node.left:
+            if str(node.left.key) not in graph:
+                graph.add_node(str(node.left.key), radius=10, stroke=(0, 0, 0, 0.8))
+            graph.add_edge(graph[str(node.key)], graph[str(node.left.key)], stroke=(0, 0, 0, 0.6))
+            self._display(node.left, graph)
+
 class Test(unittest.TestCase):
     def test_binary_heap(self):
         bh = BinaryHeap()
@@ -370,8 +543,7 @@ class Test(unittest.TestCase):
         """
         bst = BinarySearchTree()
         for e in l:
-            key, value = e
-            bst.put(key, value)
+            bst.put(*e)
         self.assertEquals('C', bst.get(1))
         self.assertEquals('A', bst.get(3))
         self.assertEquals(6, bst.root.count)
@@ -379,6 +551,8 @@ class Test(unittest.TestCase):
         self.assertEqual(2, bst.min(bst.root)[1])
         self.assertEqual(3, bst.max(bst.root)[1])
         self.assertEqual(4, bst.depth(bst.root))
+        bst.depth_first_search(bst.root)
+        bst.breadth_search()
         bst.delete(3)
         self.assertEquals(5, bst.root.count)
         
@@ -392,18 +566,23 @@ class Test(unittest.TestCase):
         size = 14
 #        print l[:size]
         for e in l[:size]:
-            key, value = e
-            rbt.put(key, value)
+            rbt.put(*e)
         self.assertEquals(size, rbt.root.count)
     
-    def test_AVL(self):
+    def test_AVLTree(self):
         avl = AVLTree()
-        z = [(3, 'H'), (2, 'Y'), (1, 'F'), (4, 'M'), (5, 'J'), (6, 'E'), (7, 'K'), (16, 'C'), (15, 'P') ]
-        for e in z:
-            key, value = e
-            avl.put(key, value)
-#        avl.display()  
+        l = [(3, 'H'), (2, 'Y'), (1, 'F'), (4, 'M'), (5, 'J'), (6, 'E'), (7, 'K'), (16, 'C'), (15, 'P') ]
+        for e in l:
+            avl.put(*e)
+#        avl.display()
 
+    def test_TTTree(self):
+        from string import ascii_uppercase
+        tt = TwoThreeSearchTree()
+        l = zip(ascii_uppercase, ascii_uppercase)
+        for e in l[:7]:
+            tt.put(*e)
+            tt.display(e[0])
         
 if __name__ == '__main__':
     unittest.main()
