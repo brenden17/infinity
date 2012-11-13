@@ -1,8 +1,11 @@
 Pattern==2.4
+PyYAML==3.10
 argparse==1.2.1
+boto==2.6.0
 distribute==0.6.24
 ipython==0.13.1
 matplotlib==1.1.1
+mrjob==0.3.5
 numpy==1.6.2
 pyzmq==2.2.0.1
 scikit-learn==0.12.1

@@ -146,7 +146,7 @@ class BinarySearchTree(object):
     
     def floor(self, key):
         """largest key <= to a given key"""
-        
+        pass
     
     def ceiling(self, key):
         """smallest key >= to a given key"""
