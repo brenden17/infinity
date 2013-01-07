@@ -4,5 +4,5 @@
 
 cd ~/workspace/infinity/
 source ~/workspace/infinity/dist/bin/activate
-cd ~/workspace/infinity/infinity/doc
-ipython notebook --pylab=inline
+cd ~/workspace/infinity/infinity/bigdata
+ipython notebook --pylab inline

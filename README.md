@@ -6,9 +6,9 @@ Python
  * Tree
 
 * Bigdata
- * pandas
+ * pandas - http://pandas.pydata.org/
  * mrJob - http://github.com/Yelp/mrjob
- * sklearn
+ * sklearn - http://scikit-learn.org/
 
 * Doc
  * ipython
