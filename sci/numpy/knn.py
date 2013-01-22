@@ -3,7 +3,6 @@ from pylab import plot, show
 
 def distance(x, D):
     return sqrt(((D-x)**2).sum(axis=0))
-    
 
 def knn_search(x, D, K):
     ndata = D.shape[1]
