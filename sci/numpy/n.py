@@ -15,18 +15,18 @@ CHILD, ADULT = (0, 1)
 MALE, FEMALE = (0, 1)
 
 def filter_age(age):
-    try: 
+    try:
         age = float(age)
         return CHILD if age < 15 else ADULT
     except:
         return -1
-        
+
 def filter_survived(servive):
-    try: 
+    try:
         return int (servive)
     except:
         return -1
-    
+
 filter_data = {PCLASS : None,
                SURVIVED: filter_survived,
                SEX : lambda sex: MALE if sex=='male' else FEMALE,
@@ -64,6 +64,3 @@ def raw_load_data(filename, flt=None):
 if __name__ == '__main__':
     features, raw_target, raw_data = raw_load_data('titanic.csv')
     print raw_data
-    
-    
-    
