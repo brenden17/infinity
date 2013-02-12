@@ -1,11 +1,17 @@
+Cython==0.18
+PIL==1.1.7
 Pattern==2.4
+Pillow==1.7.8
 PyYAML==3.10
 argparse==1.2.1
 boto==2.6.0
 distribute==0.6.24
+h5py==2.1.1
 ipython==0.13.1
 matplotlib==1.1.1
 mrjob==0.3.5
+nltk==2.0.4
+numexpr==2.0.1
 numpy==1.6.2
 pandas==0.9.1
 python-dateutil==2.1
@@ -15,5 +21,6 @@ scikit-learn==0.12.1
 scipy==0.11.0
 simplejson==2.6.1
 six==1.2.0
+tables==2.4.0
 tornado==2.4
 wsgiref==0.1.2

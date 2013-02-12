@@ -1,5 +1,7 @@
 from PIL import Image
+import numpy as np
 from pylab import *
+from scipy.ndimage import filters
 
 def basic_pil():
     im = Image.open('./dataimg/empire.jpg').convert('L') #convert to grayscale
@@ -55,20 +57,66 @@ def main1():
     show()
 
 def filtering():
-    from PIL import Image
-    from numpy import array
-    from scipy.ndimage import filters
-
-    im = array(Image.open('./dataimg/empire.jpg').convert('L'))
+    im = np.array(Image.open('./dataimg/empire.jpg').convert('L'))
     im2 = filters.gaussian_filter(im, 15)
+    imx = np.zeros(im.shape)
+    filters.sobel(im, 1, imx)
 
-    imshow(im2)
+    imshow(imx)
     gray() #use gray() when you use convert
     show()
 
+def compute_harris_response(im, sigma=3):
+    imx = zeros(im.shape)
+    filters.gaussian_filter(im, (sigma, sigma), (0, 1), imx)
+    imy = zeros(im.shape)
+    filters.gaussian_filter(im, (sigma, sigma), (1, 0), imy)
+
+    Wxx = filters.gaussian_filter(imx * imx, sigma)
+    Wxy = filters.gaussian_filter(imx * imy, sigma)
+    Wyy = filters.gaussian_filter(imy * imy, sigma)
+
+    Wdet = Wxx * Wyy - Wxy ** 2
+    Wtr = Wxx + Wyy
+
+    return Wdet / (Wtr * Wtr)
+
+def get_harris_points(harrisim, min_dist=10, threshold=0.1):
+    corner_threshold = harrisim.max() *  threshold
+    harrisim_t = (harrisim > corner_threshold) * 1
+
+    coords = array(harrisim_t.nonzero()).T
+
+    candidate_values = [harrisim[c[0], c[1]] for c in coords]
+
+    index = argsort(candidate_values)
+
+    allowed_locations = zeros(harrisim.shape)
+    allowed_locations[min_dist:-min_dist, min_dist:-min_dist] = 1
+
+    filtered_coords = []
+    for i in index:
+        if allowed_locations[coords[i, 0], coords[i, 1]] == 1:
+            filtered_coords.append(coords[i])
+            allowed_locations[(coords[i,0]-min_dist):(coords[i,0]+min_dist),
+                (coords[i,1]-min_dist):(coords[i,1]+min_dist)] = 0
+
+    return filtered_coords
+
+def plot_harris_points(image, filtered_coords):
+    figure()
+    gray()
+    plot([p[1] for p in filtered_coords], [p[0] for p in filtered_coords], '*')
+    axis('off')
+    show()
+
+def main_harris():
+    im = np.array(Image.open('./dataimg/empire.jpg').convert('L'))
+    hrs = compute_harris_response(im)
+    filtered_coords = get_harris_points(hrs, 6)
+    plot_harris_points(im, filtered_coords)
+
 if __name__ == '__main__':
-   filtering() 
-
-
-
+   #filtering() 
+    main_harris()
 
