@@ -2,8 +2,12 @@
 source from :
 www.laurentluce.com/posts/twitter-sentiment-analysis-using-python-and-nltk/
 """
-
-import nltk
+from nltk import FreqDist
+from nltk import classify
+from nltk import NaiveBayesClassifier
+from nltk.tokenize import word_tokenize
+from nltk.stem import WordNetLemmatizer, PorterStemmer
+from nltk.corpus import stopwords
 
 pos_tweet = [('I love this car', 'positive'),
                 ('This view is amazing', 'positive'),
@@ -18,9 +22,23 @@ neg_tweet = [('I do not like this car', 'negative'),
                 ('He is my enemy', 'negative') ]
 
 tweet = []
+lemmatizer = WordNetLemmatizer()
+stopset = stopwords.words('english')
+stemmer = PorterStemmer()
+
+def normalize(sentence, stopword=False, stem=False, lemma=True):
+    words = word_tokenize(sentence)
+    if stopword:
+        word = [word for word in words if not word in stopset] 
+    if stem:
+        words = [stemmer.stem(word) for word in words]
+    if lemma:
+        words = [lemmatizer.lemmatize(word, 'v') for word in words]
+    return words
+
 for (words, sentiment) in pos_tweet + neg_tweet:
-    word_filtered = [e.lower() for e in words.split() if len(e)>=3]
-    tweet.append((word_filtered, sentiment))
+    s = normalize(words)
+    tweet.append((s, sentiment))
 
 def get_words_in_tweets(tweet):
     all_words = []
@@ -29,10 +47,11 @@ def get_words_in_tweets(tweet):
     return all_words
 
 def get_words_features(wordlist):
-    wordlist = nltk.FreqDist(wordlist)
+    wordlist = FreqDist(wordlist)
     return wordlist.keys()
 
 word_features = get_words_features(get_words_in_tweets(tweet))
+
 #print word_features
 
 def extract_features(document):
@@ -41,12 +60,13 @@ def extract_features(document):
     for word in word_features:
         features['contains(%s)' % word] = (word in document_words)
     return features
-print tweet
-training_set = nltk.classify.apply_features(extract_features, tweet) 
-print training_set
 
-classifier = nltk.NaiveBayesClassifier.train(training_set)
+training_set = classify.apply_features(extract_features, tweet) 
+#print training_set
+
+classifier = NaiveBayesClassifier.train(training_set)
 #print classifier.show_most_informative_features(32)
+print classify.accuracy(classifier, training_set)
 
 t = 'Larry is not my friend'
 print  classifier.classify(extract_features(t.split()))
