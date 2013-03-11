@@ -4,6 +4,7 @@ Pattern==2.4
 Pillow==1.7.8
 PyYAML==3.10
 argparse==1.2.1
+biopython==1.61
 boto==2.6.0
 distribute==0.6.24
 h5py==2.1.1
