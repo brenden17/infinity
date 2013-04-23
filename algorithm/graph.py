@@ -112,7 +112,11 @@ class GraphUtil(object):
 TRUE, FALSE = 1, 0
 class GraphSearcher(object):
     VERTEX, MARK, TO, GROUP = 0, 1, 2, 3
-    def __init__(self, graph):
+    def __init__(self, graph=None):
+        if graph:
+            self._init_graph(graph)
+
+    def _init_graph(self, graph):
         self.graph = graph
         vertexcount = len(graph.verteces)
         self.dfstable = np.zeros((vertexcount, 4), dtype=np.int8)
@@ -120,7 +124,16 @@ class GraphSearcher(object):
         self.group_count = 0
         self.topological_order = list()
 
-    def depth(self, startv):
+    def set_tables(self, verteces):
+        vertexcount = len(graph.verteces)
+        self.dfstable = np.zeros((vertexcount, 4), dtype=np.int8)
+        self.bfstable = np.zeros((vertexcount, 4), dtype=np.int8)
+
+    def depth(self, startv, graph=None):
+        if graph:
+            self._init_graph(graph)
+        if self.graph:
+            return None
         #self._depth(startv)
         for v in self.graph.verteces:
             if not self.dfstable[v][GraphSearcher.MARK]:
@@ -193,11 +206,14 @@ class MST(object):
         for e in self.graph.edges:
             pq.put(e)
         n_verteces = len(self.graph.verteces)
+
         while not pq.empty() and len(l)<n_verteces-1:
             e = pq.get()
             print e.weight
             startv, tov = e.startv, e.tov
-            if not g.check_cycle(start,to):
+            gs = GraphSearcher(g)
+            gs.depth(startv)
+            if not gs.check_cycle(startv,tov):
                 g.add_vertex_edge(startv, tov)
                 l.append(e)
         print g.adj

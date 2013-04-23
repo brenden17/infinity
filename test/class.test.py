@@ -68,7 +68,79 @@ class Parent(object):
 class Child(Parent):
     CLASS_STRING = 'Child Class'
 
+class CallClass(object):
+    def self_call(self, a):
+        print 'print self call'
+
+    def self_caller(self, a):
+        print '== self method ================================'
+        try:
+            self.self_call(a)
+        except Exception, e:
+            print '*** Not access to self method in class method'
+        try:
+            self.class_call(a)
+        except Exception, e:
+            print '*** Not access to self method in class method'
+        try:
+            cls.class_call(a)
+        except Exception, e:
+            print '*** Not access to class method in class method'
+        try:
+            cls.self_call(a)
+        except Exception, e:
+            print '*** Not access to class method in class method'
+        try:
+            cls.static_call(a)
+        except Exception, e:
+            print '*** Not access to static method in class method'
+        try:
+            CallClass.static_call(a)
+        except Exception, e:
+            print '*** Not access to static method in class method'
+
+    @classmethod
+    def class_call(cls, a):
+        print 'print class call'
+
+    @classmethod
+    def class_caller(cls, a):
+        print '== class method ================================'
+        try:
+            self.self_call(a)
+        except Exception, e:
+            print '*** Not access to self method in class method'
+        try:
+            self.class_call(a)
+        except Exception, e:
+            print '*** Not access to self method in class method'
+        try:
+            cls.class_call(a)
+        except Exception, e:
+            print '*** Not access to class method in class method'
+        try:
+            cls.self_call(a)
+        except Exception, e:
+            print '*** Not access to class method in class method'
+        try:
+            cls.static_call(a)
+        except Exception, e:
+            print '*** Not access to static method in class method'
+        try:
+            CallClass.static_call(a)
+        except Exception, e:
+            print '*** Not access to static method in class method'
+
+    @staticmethod
+    def static_call(a):
+        print 'static class'
+
+    @staticmethod
+    def static_caller(a):
+        pass
+
 if __name__ == '__main__':
+    '''
     print '## Parent #######################'
     p = Parent()
     p.self_call('')
@@ -82,3 +154,10 @@ if __name__ == '__main__':
     c.self_call('')
     c.class_call('')
     c.static_call('')
+    '''
+
+    print '## caller #######################'
+    c = CallClass()
+    c.self_caller('')
+    c.class_caller('')
+    CallClass.class_caller('')
