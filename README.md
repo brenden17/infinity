@@ -4,6 +4,7 @@ Python
 * Algorithm
  * Sort 
  * Tree
+ * Graph
 
 * Bigdata
  * pandas - http://pandas.pydata.org/
