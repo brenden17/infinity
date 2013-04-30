@@ -35,12 +35,12 @@ class Perception(object):
         return np.where(output>0.5, 1, 0)
 
 def sigmod(output, beta=1):
-    return 1.0 / (1.0 + np.exp(output))
+    return 1.0 / (1.0 + np.exp(-output))
     #return 1.0 / (1.0 + np.exp(beta * output))
 
 class MLP(object):
     """Multi Layer Perception"""
-    def __init__(self, data, target, hidden_layer=2, iter_count=4, theta=0.35):
+    def __init__(self, data, target, hidden_layer=2, iter_count=554, theta=0.45):
         data_m = data.shape[0]
         data_n = 1 if data.ndim==1 else data.shape[1]
         target_n = 1 if target.ndim==1 else target.shape[1]
@@ -52,12 +52,13 @@ class MLP(object):
         self.weight1 = np.random.rand(data_n+1, hidden_layer)
         self.weight2 = np.random.rand(hidden_layer+1, target_n)
 
-    def set_extra(self, m):
-        return -np.ones((1)) if m.ndim==1 else -np.ones((m.shape[1], 1))
-
     def fwd(self, data, func=sigmod):
         hidden_output = np.dot(data, self.weight1)
+        print 'hidden_output'
+        print hidden_output
         tmp_output = func(hidden_output)
+        print 'tmp_output'
+        print tmp_output
         o = -np.ones((1)) if tmp_output.ndim==1 else -np.ones((tmp_output.shape[0], 1))
         self.hidden_output = np.hstack((tmp_output, o))
         output = np.dot(self.hidden_output, self.weight2)
@@ -69,7 +70,10 @@ class MLP(object):
             fwd_output = self.fwd(data)
 
             error = 0.5 * sum((self.target - fwd_output) ** 2)
-            print "Iteration: ", n, "\tError: ", error 
+            print '@@@@@@@@@@@@@@@@@@@@@'
+            print self.target
+            print np.where(fwd_output>0.5, 1, 0)
+            print "Iteration: ", n, "\tError: ", error
 
             delta_o = (self.target - fwd_output) *\
                         fwd_output * (1 - fwd_output)
@@ -94,10 +98,10 @@ class MLP(object):
         data = np.hstack((test_input, o))
         print data
         print '**************'
-        return self.fwd(data)
+        return np.where(self.fwd(data)>0.5, 1, 0)
 
 class Test(unittest.TestCase):
-    def test_perception1(self):
+    def a_test_perception1(self):
         print '-----test_perception1------'
         data = np.array([[0, 0], [1, 0], [0, 1], [1, 1]])
         target = np.array([[0], [1], [1], [1]])
@@ -105,7 +109,7 @@ class Test(unittest.TestCase):
         pcn.train()
         self.assertEquals(0, pcn.predict(np.array([-1, -1])))
 
-    def test_perception2(self):
+    def a_test_perception2(self):
         print '-----test_perception2------'
         data = np.array([[0, 0], [1, 0], [0, 1], [1, 1]])
         target = np.array([[0, 0], [1, 0], [0, 1], [1, 1]])
@@ -113,7 +117,7 @@ class Test(unittest.TestCase):
         pcn.train()
         self.assertEquals(np.array([1, 1]), pcn.predict(np.array([2,2])))
 
-    def perception3(self):
+    def a_test_perception3(self):
         print '-----test_perception3------'
         data = np.array([[0, 0], [1, 0], [0, 1], [1, 1]])
         target = np.array([[1], [2], [3], [4]])
@@ -121,13 +125,13 @@ class Test(unittest.TestCase):
         pcn.train()
         self.assertEquals(1, pcn.predict(np.array([-1, -1])))
 
-    def mlp(self):
+    def test_mlp(self):
         data = np.array([[0, 0], [1, 0], [0, 1], [1, 1]])
         target = np.array([1, 0, 0, 1])
-        mlp = MLP(data, target) 
+        mlp = MLP(data, target)
         mlp.train()
         print '======================'
-        self.assertEquals([0, 0], mlp.test(np.array([-1, -1])))
+        self.assertEquals([0], mlp.test(np.array([-1, -1])))
 
 if __name__ == '__main__':
     unittest.main()
