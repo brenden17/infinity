@@ -139,6 +139,13 @@ class CallClass(object):
     def static_caller(a):
         pass
 
+class Test(object):
+    def __init__(self):
+        self.name = 'self name'
+
+    def call(self, a=self.name):
+        print 'print ' + self.name
+
 if __name__ == '__main__':
     '''
     print '## Parent #######################'
@@ -154,10 +161,13 @@ if __name__ == '__main__':
     c.self_call('')
     c.class_call('')
     c.static_call('')
-    '''
 
     print '## caller #######################'
     c = CallClass()
     c.self_caller('')
     c.class_caller('')
     CallClass.class_caller('')
+    '''
+
+    c = Test()
+    c.call()

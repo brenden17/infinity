@@ -29,6 +29,7 @@ def test_gaussianNB(plot=True):
     iris = load_iris()
     m, f = iris.data.shape
     x = np.array([0.7, 1.2, 4, 4.2])
+    x = np.array([5,5,5,2])
     FEATURES = range(f)
     CATEGORIES = ['SETOSA', 'VERSICOLOR', 'VIRGINCA']
     GROUP = ((0, 50), (50, 100), (100, 150))
