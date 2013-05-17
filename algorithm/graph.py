@@ -125,7 +125,7 @@ class GraphSearcher(object):
         self.topological_order = list()
 
     def set_tables(self, verteces):
-        vertexcount = len(graph.verteces)
+        vertexcount = len(verteces)
         self.dfstable = np.zeros((vertexcount, 4), dtype=np.int8)
         self.bfstable = np.zeros((vertexcount, 4), dtype=np.int8)
 

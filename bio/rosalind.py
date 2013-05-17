@@ -153,7 +153,7 @@ def find_pos(seq, sub, start=0, end=2147483647):
         seq.find(sub, new_start, end)
         if new_start < 0:
             break
-        pos.append(new_start)
+        post.append(new_start)
         new_start += 1
 
 class ExtendSeq(Seq):
