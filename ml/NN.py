@@ -1,30 +1,12 @@
 import unittest
+
 import numpy as np
 
-def shape(a):
-    #return a.shape if a.ndim>1 else a.shape[0], 1
-    if a.ndim>1:
-        return a.shape
-    else:
-        return a.shape[0], 1
+from MLhelp import shape, threshold, sigmod, softmax, normalise
 
-def threshhold(ar, value=0.5, highbase=1, lowbase=0):
-    return np.where(ar>value, highbase, lowbase)
-
-def sigmod(z, beta=1):
-    return 1.0 / (1.0 + np.exp(-beta * z))
-
-def softmax(ar):
-    normalise = np.sum(np.exp(ar), axis=1) * np.ones((1, shape(ar)[0]))
-    return np.transpose(np.transpose(np.exp(ar))/normalise)
-
-def normalise(ar):
-    mean_ar = ar - ar.mean(axis=0)
-    return mean_ar/ar.std(axis=0)
-
-class Perception(object):
-    """Perception"""
-    def __init__(self, data, target, itercount=20, theta=0.25):
+class Perceptron(object):
+    """Perceptron"""
+    def __init__(self, data, target, itercount=2120, theta=0.25):
         self.dm, self.dn = shape(data)
         self.tm, self.tn = shape(target)
         assert self.dm == self.tm
@@ -35,28 +17,37 @@ class Perception(object):
         self.itercount = itercount
         self.theta = theta
 
-    def _fwd(self, data, func=threshhold):
+    def _fwd(self, data, func=threshold):
         output = np.dot(data, self.weight)
-        if self.tn == 1:
-            return func(output)
-        else:
-            return np.argmax(output), np.argmax(self.target)
+        return func(output)
 
-    def fwd(self, func=threshhold):
+    def fwd(self, data=None, func=threshold):
+        if data is not None:
+            self.dm, self.dn = shape(data)
+            self.data = np.hstack((data, -np.ones((self.dm, 1))))
         return self._fwd(self.data)
 
-    def train(self):
+    def train(self, data=None, target=None):
+        if data is not None:
+            self.dm, self.dn = shape(data)
+            self.data = np.hstack((data, -np.ones((self.dm, 1))))
+        if target is not None:
+            self.target = target
+
         change = range(self.dm)
-        for i in range(self.itercount):
+
+        for n in range(self.itercount):
             error = 0.5 * sum((self.target - self.fwd()) ** 2)
-            print "Iteration: ", i, "\tError: ", error
+            if n % 200 == 0:
+                print '++++++++++++++++++'
+                print "Iteration: ", n, "\tError: ", error
             self.weight += self.theta * np.dot(np.transpose(self.data), self.target - self.fwd())
 
             np.random.shuffle(change)
             self.data = self.data[change, :]
             self.target = self.target[change, :]
 
-    def predict(self, test_data, func=threshhold):
+    def predict(self, test_data, func=threshold):
         #data = np.hstack((test_data, -np.ones(1)))
         data = np.hstack((test_data, -np.ones((shape(test_data)[0], 1))))
         print self._fwd(data)
@@ -76,7 +67,6 @@ def convert_target(target):
     t[np.where(target==0), 0] = 1
     t[np.where(target==1), 1] = 1
     t[np.where(target==2), 2] = 1
-    print shape(t)
     return t
 
 class MLP(object):
@@ -153,32 +143,32 @@ class MLP(object):
 
     def predict(self, test_input):
         data = np.hstack((test_input, -np.ones((shape(test_input)[0], 1))))
-        return threshhold(self.fwd(data))
+        return threshold(self.fwd(data))
 
     def score(self, input_data, target):
         data = np.hstack((input_data, -np.ones((shape(input_data)[0], 1))))
-        output = threshhold(self.fwd(data))
+        output = threshold(self.fwd(data))
         m = data.shape[0]
         s = np.sum([(output[i]==target[i]).all() for i in range(m)])
         return float(s) / float(m) * 100.0
 
 class Test(unittest.TestCase):
-    def a_test_perception1(self):
-        print '-----test_perception1------'
+    def test_perceptron(self):
+        print '-----test_perceptron1------'
         data = np.array([[0, 0], [1, 0], [0, 1], [1, 1]])
         target = np.array([0, 1, 1, 1])
         target = target[:, np.newaxis]
-        pcn = Perception(data, target)
+        pcn = Perceptron(data, target)
         pcn.train()
         pcn.score(data, target)
-        self.assertEquals([0], pcn.predict(np.array([[-1, -1], [-1, 1]])))
+        self.assertEquals([[0], [0]], pcn.predict(np.array([[-1, -1], [-1, 1]])))
 
-    def a_test_perception2(self):
-        print '-----test_perception2------'
+    def a_test_perceptron2(self):
+        print '-----test_perceptron2------'
         data = np.array([[0, 0], [1, 0], [0, 1], [1, 1]])
         target = np.array([1, 2, 3, 4])
         target = target[:, np.newaxis]
-        pcn = Perception(data, target)
+        pcn = Perceptron(data, target)
         pcn.train()
         self.assertEquals([1], pcn.predict(np.array([-1, -1])))
 
