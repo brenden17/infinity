@@ -63,7 +63,7 @@ class Perceptron(object):
 
 def convert_target(target):
     m, n = shape(target)
-    t = np.zeros((m, 3))
+    t = np.zeros((n, 3))
     t[np.where(target==0), 0] = 1
     t[np.where(target==1), 1] = 1
     t[np.where(target==2), 2] = 1
