@@ -194,13 +194,13 @@ class Test(unittest.TestCase):
         from sklearn.datasets import load_iris
         iris = load_iris()
         data = iris.data
-        normalise_data = normalise(data)
+        normalised_data = normalise(data)
         target = convert_target(iris.target)
         print '======================'
-        mlp = MLP(normalise_data, target, hidden_node=17,
+        mlp = MLP(normalised_data, target, hidden_node=17,
                     itercount=2005, theta=0.9, mode='softmax')
         mlp.train()
-        self.assertEquals(100, mlp.score(normalise_data, target))
+        self.assertEquals(100, mlp.score(normalised_data, target))
         self.assertEquals([[0, 0, 1]], mlp.predict(np.array([[5,5,5,2]])))
 
 if __name__ == '__main__':

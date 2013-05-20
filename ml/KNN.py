@@ -3,7 +3,7 @@ import operator
 
 import numpy as np
 
-from MLhelp import gaussian, shape
+from MLhelp import gaussian, shape, get_most_likely_group
 
 class KNN(object):
     def __init__(self):
@@ -15,17 +15,14 @@ class KNN(object):
         candicates = target[indexes][:candi]
 
         if mode == 'category':
-            l = candicates.tolist()
-            ll = {i:l.count(i) for i in set(l)}
-            return sorted(ll.iteritems(),
-                key=operator.itemgetter(1),reverse=True)[0][0]
+            return get_most_likely_group(candicates)
         elif mode == 'reg':
             return candicates.mean()
         else:
             return None
 
 class Test(unittest.TestCase):
-    def test_distance(self):
+    def test_knn(self):
         from sklearn.datasets import load_iris
         iris = load_iris()
         data = iris.data
