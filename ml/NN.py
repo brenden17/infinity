@@ -12,7 +12,6 @@ class Perceptron(object):
         assert self.dm == self.tm
         self.weight = np.random.rand(self.dn+1, self.tn)
         self.data = np.hstack((data, -np.ones((self.dm, 1))))
-        #self.target = target.reshape(self.tm, 1)
         self.target = target
         self.itercount = itercount
         self.theta = theta
@@ -47,10 +46,12 @@ class Perceptron(object):
             self.data = self.data[change, :]
             self.target = self.target[change, :]
 
+        print 'WEIGHT ==========================='
+        print self.weight
+
     def predict(self, test_data, func=threshold):
         #data = np.hstack((test_data, -np.ones(1)))
         data = np.hstack((test_data, -np.ones((shape(test_data)[0], 1))))
-        print self._fwd(data)
         return self._fwd(data)
 
     def score(self, input_data, target):
@@ -59,7 +60,6 @@ class Perceptron(object):
         m = data.shape[0]
         s = np.sum([(output[i]==target[i]).all() for i in range(m)])
         return float(s) / float(m) * 100.0
-
 
 def convert_target(target):
     m, n = shape(target)
@@ -140,6 +140,8 @@ class MLP(object):
             np.random.shuffle(change)
             self.data = self.data[change, :]
             self.target = self.target[change, :]
+        print 'WEIGHTS =================='
+        print self.weight1, self.weight2
 
     def predict(self, test_input):
         data = np.hstack((test_input, -np.ones((shape(test_input)[0], 1))))
@@ -181,7 +183,7 @@ class Test(unittest.TestCase):
         print '======================'
         self.assertEquals([1], mlp.predict(np.array([[-1, -1]])))
 
-    def test_mlp2(self):
+    def a_test_mlp2(self):
         data = np.array([[0, 0], [1, 0], [0, 1], [1, 1]])
         target = np.array([0, 1, 1, 1])
         target = target[:, np.newaxis]
@@ -190,7 +192,7 @@ class Test(unittest.TestCase):
         print '======================'
         self.assertEquals([1], mlp.predict(np.array([[-1, -1]])))
 
-    def test_iris(self):
+    def a_test_iris(self):
         from sklearn.datasets import load_iris
         iris = load_iris()
         data = iris.data
