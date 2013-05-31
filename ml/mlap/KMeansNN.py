@@ -4,7 +4,7 @@ import numpy as np
 
 from MLhelp import shape
 
-class KMeanNN(object):
+class KMeansNN(object):
     def __init__(self, data, k=3, itercount=2, eta=0.25):
         self.m, self.n = shape(data)
         self.data = data
@@ -36,12 +36,12 @@ class KMeanNN(object):
 
 
 class Test(unittest.TestCase):
-    def test_KMeanNN(self):
+    def test_KMeansNN(self):
         from sklearn.datasets import load_iris
         iris= load_iris()
         data = iris.data
         target = iris.target
-        kmnn = KMeanNN(data)
+        kmnn = KMeansNN(data)
         kmnn.train()
         kmnn.predict()
         self.assertEquals(100, kmnn.score(data, target))

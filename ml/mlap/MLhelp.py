@@ -33,9 +33,12 @@ def normalise(ar):
     mean_ar = ar - ar.mean(axis=0)
     return float(mean_ar)/float(ar.std(axis=0))
 
-def distance(a, b, func=None):
+def distance(a, b, func=None, mode='euclidean'):
     f = func if func is not None else lambda x:x
-    return np.sqrt(sum(np.power(f(a) - f(b), 2), axis=1))
+    if mode == 'manhatton':
+        return sum(np.abs(f(a) - f(b)), axis=1)
+    else:
+        return np.sqrt(sum(np.power(f(a) - f(b), 2), axis=1))
 
 def count_item(ar):
     count = np.bincount(ar)
@@ -72,22 +75,29 @@ class Test(unittest.TestCase):
                                 distance(a, b, func=sigmod), places=3)
         self.assertAlmostEquals(0.26,
                                 distance(a, b, func=gaussian), places=1)
+
         a = np.array([[1, 2], [2,1]])
         b = np.array([[2, 1], [1,2]])
         self.assertTrue(np.array_equal(np.array([np.sqrt(2), np.sqrt(2)]),
                             distance(a,b)))
 
-    def test_count_item(self):
+        a = np.array([[1, 2], [2,1]])
+        b = np.array([[2, 1], [1,2]])
+        self.assertTrue(np.array_equal(np.array([2, 2]),
+                            distance(a,b, mode='manhatton')))
+
+
+    def _test_count_item(self):
         c = np.array([100, 100, 1, 50,50, 30, 150, 150, 100])
         self.assertEquals([(100, 3), (50, 2), (150, 2), (1, 1), (30, 1)],
                             count_item(c))
         self.assertEquals(100, get_most_likely_group(c))
 
-    def test_get_randomsee(self):
+    def _test_get_randomsee(self):
         ar = np.array([[1, 5, 10], [2,6,11], [4, 9, 15]])
         get_randomseed(ar, (2,3))
 
-    def test_draw(self):
+    def _test_draw(self):
         x = np.linspace(-4, 4, 1000)
         y = np.linspace(-4, 4, 1000)
         draw(x, maxican(x, y))
