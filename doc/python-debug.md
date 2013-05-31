@@ -1,5 +1,8 @@
 # debugging in ipython
 
+//
+run -d debug.py
+
 | command | action |
 |---------|--------|
 | h(elp) | show command list |
