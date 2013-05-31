@@ -1,7 +1,8 @@
 # debugging in ipython
 
-//
+~~~
 run -d debug.py
+~~~
 
 | command | action |
 |---------|--------|
