@@ -1,6 +1,11 @@
 # debugging in ipython
 
 | command | action |
---------------------
-| h(help) | show command list |
-| c(continue) | show command list |
+|---------|--------|
+| h(elp) | show command list |
+| help command | show document for command |
+| c(ontinue) | resume program execution |
+| b(reak) line | set breakpoint |
+| s(tep) | step into function call |
+| n(next)| execute next line |
+| u(p) / d(own) | move up/down in function call stack |

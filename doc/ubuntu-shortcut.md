@@ -1,5 +1,5 @@
 # Ubuntu Shortcut
-from [here](https://help.ubuntu.com/community/KeyboardShortcuts)
+from [here](https://help.ubuntu.com/community/KeyboardShortcuts), [here](http://support.mashery.com/docs/customizing_your_portal/Markdown_Cheat_Sheet)
 
 * alt + f1 : application menu
 * alt + f2 : apllication launcher
