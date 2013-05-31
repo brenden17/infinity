@@ -87,10 +87,6 @@ class CallClass(object):
         except Exception, e:
             print '*** Not access to class method in class method'
         try:
-            cls.self_call(a)
-        except Exception, e:
-            print '*** Not access to class method in class method'
-        try:
             cls.static_call(a)
         except Exception, e:
             print '*** Not access to static method in class method'
@@ -116,10 +112,6 @@ class CallClass(object):
             print '*** Not access to self method in class method'
         try:
             cls.class_call(a)
-        except Exception, e:
-            print '*** Not access to class method in class method'
-        try:
-            cls.self_call(a)
         except Exception, e:
             print '*** Not access to class method in class method'
         try:
