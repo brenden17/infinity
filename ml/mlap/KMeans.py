@@ -4,6 +4,8 @@ import numpy as np
 
 from MLhelp import shape, distance,  get_randomseed, distance
 
+from silhouette import Silhouette as sh
+
 class KMeans(object):
     centroid = None
     assigneddata = None
@@ -34,7 +36,7 @@ class KMeans(object):
         while not np.array_equal(old_centroid, cls.centroid) and\
                  count<itercount:
             old_centroid = cls.centroid.copy()
-            count = count + 1
+            count += 1
 
             for c in range(k):
                 scoretable[:, c] = distance(cdata[:, :-1], cls.centroid[c, :])
@@ -46,6 +48,10 @@ class KMeans(object):
                         cdata[np.where(cdata[:,-1]==c)].mean(axis=0)[:-1]
 
         cls.assigneddata = cdata
+
+    @classmethod
+    def score(cls):
+        return sh.score(cls.assigneddata)
 
     @classmethod
     def assigngroup(data, k=0, centroid=None):
@@ -67,39 +73,43 @@ class KMeans(object):
         return cdata
 
     @classmethod
-    def score(cls, target):
-        m, n = shape(cls.assigneddata)
-        return float(np.sum(cls.assigneddata[:, -1]==target)) / m * 100
-
-    @classmethod
-    def match(cls, data, target, k=3, itercount=100):
+    def match(cls, data, k=3, itercount=50):
         result = dict()
         for i in range(itercount):
             cls.train(data, k)
-            score = cls.score(target)
+            print cls.centroid
+            print cls.assigneddata
+            score = cls.score()
+            print score
             result[score] = cls.centroid
-        print sorted(result.items(), reverse=True)[0][0]
+        print sorted(result.items(), reverse=True)
         return sorted(result.items(), reverse=True)[0][1]
 
 class Test(unittest.TestCase):
-    def _test_kmeans(self):
+    def test_kmeans(self):
         from sklearn.datasets import load_iris
         iris = load_iris()
         data = iris.data
         target = iris.target
-        KMeans.train(data, k=3)
-        self.assertEquals(1, KMeans.score(target))
+        #KMeans.train(data, k=3)
+        KMeans.match(data, k=3)
+        self.assertEquals(1, KMeans.score())
 
-    def test_max_kmeans(self):
+    def _test_max_kmeans(self):
         from sklearn.datasets import load_iris
         iris = load_iris()
         data = iris.data
         target = iris.target
         KMeans.match(data, target, 3)
+        '''
+        print sh.score(KMeans.assigneddata)
         #self.assertEquals(1, KMeans.score(target))
         KMeans.match(data, target, 2)
-        KMeans.match(data, target, 4)
-        KMeans.match(data, target, 15)
+        print sh.score(KMeans.assigneddata)
+        KMhkeans.match(data, target, 4)
+        print sh.score(KMeans.assigneddata)
+        #KMeans.match(data, target, 15)
+        '''
 
 if __name__ == '__main__':
     unittest.main ()

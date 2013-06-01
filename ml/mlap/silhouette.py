@@ -24,11 +24,9 @@ class Silhouette(object):
             # get b(i)
             scoretable[i, B] = np.min([np.min(distance(ar[np.where(ar[:, -1]==gid)][:, :-1], item[:-1])) for gid in groupids - {item[-1]}])
 
-
             # get s(i)
             scoretable[i, S] = (scoretable[i, B] - scoretable[i, A]) /\
                         float(max(scoretable[i, B], scoretable[i, A]))
-
 
         return scoretable[:, S].mean()
 
