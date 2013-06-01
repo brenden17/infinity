@@ -14,7 +14,7 @@ def shape(a):
 
 def sum(a, axis=None):
     m, n = shape(a)
-    return a.sum() if axis==1 and m==1 else a.sum(axis=axis)
+    return np.array([a.sum()]) if axis==1 and m==1 else a.sum(axis=axis)
 
 def threshold(ar, value=0.5, highbase=1, lowbase=0):
     return np.where(ar>value, highbase, lowbase)
@@ -79,6 +79,11 @@ class Test(unittest.TestCase):
         a = np.array([[1, 2], [2,1]])
         b = np.array([[2, 1], [1,2]])
         self.assertTrue(np.array_equal(np.array([np.sqrt(2), np.sqrt(2)]),
+                            distance(a,b)))
+
+        a = np.array([[1, 2], [2,1]])
+        b = np.array([2, 1])
+        self.assertTrue(np.array_equal(np.array([np.sqrt(2), np.sqrt(0)]),
                             distance(a,b)))
 
         a = np.array([[1, 2], [2,1]])

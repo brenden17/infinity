@@ -7,6 +7,7 @@ from MLhelp import shape, distance,  get_randomseed, distance
 class KMeans(object):
     centroid = None
     assigneddata = None
+    k = 0
 
     def __init__(self):
         pass
@@ -16,6 +17,7 @@ class KMeans(object):
         m, n = shape(data)
         category = np.zeros((m, 1))
         cls.centroid = get_randomseed(data, (k, n))
+        cls.k = k
 
         '''
         u = m / k
@@ -46,6 +48,25 @@ class KMeans(object):
         cls.assigneddata = cdata
 
     @classmethod
+    def assigngroup(data, k=0, centroid=None):
+        m, n = shape(data)
+        category = np.zeros((m, 1))
+        scoretable = np.zeros((m, k))
+
+        if centroid:
+            cls.centroid = centroid
+        if k:
+            cls.k = k
+
+        cdata = np.hstack((data, category))
+
+        for c in range(cls.k):
+            scoretable[:, c] = distance(cdata[:, :-1], cls.centroid[c, :])
+
+        cdata[:, -1] = scoretable.argmin(axis=1)
+        return cdata
+
+    @classmethod
     def score(cls, target):
         m, n = shape(cls.assigneddata)
         return float(np.sum(cls.assigneddata[:, -1]==target)) / m * 100
@@ -57,6 +78,7 @@ class KMeans(object):
             cls.train(data, k)
             score = cls.score(target)
             result[score] = cls.centroid
+        print sorted(result.items(), reverse=True)[0][0]
         return sorted(result.items(), reverse=True)[0][1]
 
 class Test(unittest.TestCase):
@@ -73,8 +95,11 @@ class Test(unittest.TestCase):
         iris = load_iris()
         data = iris.data
         target = iris.target
-        KMeans.match(data, target)
+        KMeans.match(data, target, 3)
         #self.assertEquals(1, KMeans.score(target))
+        KMeans.match(data, target, 2)
+        KMeans.match(data, target, 4)
+        KMeans.match(data, target, 15)
 
 if __name__ == '__main__':
     unittest.main ()
