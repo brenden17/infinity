@@ -59,6 +59,10 @@ def get_randomseed(ar, shape):
 def maxican(x, y):
     return (1-(x**2 + y**2)) / np.exp(-0.5*(x**2 + y**2)/2)
 
+def pick(ar, condition):
+    condtioned_ar = np.where(ar>condition, True, False)
+    return np.extract(condtioned_ar, ar)
+
 def draw(x, y=None, func=None):
     import pylab as pl
     if y is None and func is not None:
@@ -100,7 +104,8 @@ class Test(unittest.TestCase):
 
     def _test_get_randomsee(self):
         ar = np.array([[1, 5, 10], [2,6,11], [4, 9, 15]])
-        get_randomseed(ar, (2,3))
+        for i in range(100):
+            print get_randomseed(ar, (2,3))
 
     def _test_draw(self):
         x = np.linspace(-4, 4, 1000)
@@ -110,6 +115,11 @@ class Test(unittest.TestCase):
     def _test_draw(self):
         x = np.linspace(-4, 4, 1000)
         draw(x, func=gaussian)
+
+    def test_pick(self):
+        ar = np.array([[1,2,3,4],[3,4,5,6]])
+        self.assertTrue(np.array_equal(np.array([3,4,5,6]),
+                            pick(ar, 3)))
 
 if __name__ == '__main__':
     unittest.main ()

@@ -18,7 +18,7 @@ class KMeans(object):
     def train(cls, data, k=3, itercount=60):
         m, n = shape(data)
         category = np.zeros((m, 1))
-        cls.centroid = get_randomseed(data, (k, n))
+        cls.centroid = np.array([[5, 3, 5, 1,], [4, 3,1,1],[ 5,3, 1,0]])
         cls.k = k
 
         '''
@@ -32,16 +32,22 @@ class KMeans(object):
         scoretable = np.zeros((m, k))
         old_centroid = None
 
+
         count = 0
         while not np.array_equal(old_centroid, cls.centroid) and\
                  count<itercount:
             old_centroid = cls.centroid.copy()
             count += 1
 
-            for c in range(k):
-                scoretable[:, c] = distance(cdata[:, :-1], cls.centroid[c, :])
+            for c in range(cls.k):
+                scoretable[:, c] = distance(data, cls.centroid[c, :])
 
-            cdata[:, -1] = scoretable.argmin(axis=1)
+            #check the number of group
+            group =  scoretable.argmin(axis=1)
+            if len(np.unique(group)) != cls.k:
+                cls.centroid = get_randomseed(data, (k, n))
+                continue
+            cdata[:, -1] = group
 
             for c in range(k):
                 cls.centroid[c, :] = \
@@ -77,10 +83,7 @@ class KMeans(object):
         result = dict()
         for i in range(itercount):
             cls.train(data, k)
-            print cls.centroid
-            print cls.assigneddata
             score = cls.score()
-            print score
             result[score] = cls.centroid
         print sorted(result.items(), reverse=True)
         return sorted(result.items(), reverse=True)[0][1]

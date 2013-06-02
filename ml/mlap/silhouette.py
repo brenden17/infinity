@@ -28,6 +28,7 @@ class Silhouette(object):
             scoretable[i, S] = (scoretable[i, B] - scoretable[i, A]) /\
                         float(max(scoretable[i, B], scoretable[i, A]))
 
+        print (scoretable[:, S].mean()+1) * 50
         return scoretable[:, S].mean()
 
 
