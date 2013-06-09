@@ -8,6 +8,7 @@ from functools import partial
 
 from MLhelp import shape, distance
 
+
 class KMedoids(object):
     assigneddata = None
     def __init__(self):

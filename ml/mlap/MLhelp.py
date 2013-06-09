@@ -37,6 +37,18 @@ def distance(a, b, func=None, mode='euclidean'):
     f = func if func is not None else lambda x:x
     if mode == 'manhatton':
         return sum(np.abs(f(a) - f(b)), axis=1)
+    elif mode == 'pearson':
+        m, n = shape(a)
+        suma = sum(a, axis=1)
+        sumb = sum(b, axis=1)
+        suma2 = sum(np.power(a, 2), axis=1)
+        sumb2 = sum(np.power(b, 2), axis=1)
+        ab = sum(a * b, axis=1)
+
+        c = ab - (suma * sumb / float(n))
+        d = np.power((suma2 -np.power(suma,2)/float(n))*(sumb2-np.power(sumb,2)/float(n)) , 0.5)
+
+        return c/d
     else:
         return np.sqrt(sum(np.power(f(a) - f(b), 2), axis=1))
 
@@ -95,6 +107,13 @@ class Test(unittest.TestCase):
         self.assertTrue(np.array_equal(np.array([2, 2]),
                             distance(a,b, mode='manhatton')))
 
+        a = np.array([[2, 1], [2,1]])
+        b = np.array([[2, 1], [1,2]])
+        print distance(a,b, mode='pearson')
+        #self.assertTrue(np.array_equal(np.array([2, 2]),
+        #                    distance(a,b, mode='pearson')))
+
+
 
     def _test_count_item(self):
         c = np.array([100, 100, 1, 50,50, 30, 150, 150, 100])
@@ -116,7 +135,7 @@ class Test(unittest.TestCase):
         x = np.linspace(-4, 4, 1000)
         draw(x, func=gaussian)
 
-    def test_pick(self):
+    def _test_pick(self):
         ar = np.array([[1,2,3,4],[3,4,5,6]])
         self.assertTrue(np.array_equal(np.array([3,4,5,6]),
                             pick(ar, 3)))
