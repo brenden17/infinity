@@ -1,0 +1,1939 @@
+[['Urgent' 'Yes' 'Yes' 'Party']
+ ['Urgent' 'No' 'Yes' 'Study']
+ ['Near' 'Yes' 'Yes' 'Party']
+ ['None' 'Yes' 'No' 'Party']
+ ['None' 'No' 'Yes' 'Pub']
+ ['None' 'Yes' 'No' 'Party']
+ ['Near' 'No' 'No' 'Study']
+ ['Near' 'No' 'Yes' 'TV']
+ ['Near' 'Yes' 'Yes' 'Party']
+ ['Urgent' 'No' 'No' 'Study']]
+<Node f:Party c:No>
+[['Urgent' 'No' 'Yes' 'Study']
+ ['None' 'No' 'Yes' 'Pub']
+ ['Near' 'No' 'No' 'Study']
+ ['Near' 'No' 'Yes' 'TV']
+ ['Urgent' 'No' 'No' 'Study']]
+<Node f:Party c:['No' 'Yes']>
+[['Near' 'No' 'No' 'Study']
+ ['Near' 'No' 'Yes' 'TV']]
+<Node f:Deadline c:['Near' 'None' 'Urgent']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Lazy c:['No' 'Yes']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
+<Node f:Deadline c:['Near']>
+[['Near' 'No' 'No' 'Study']]
