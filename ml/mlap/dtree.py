@@ -10,13 +10,13 @@ class DuplicatedChild(Exception):
 class TreeNode(object):
     def __init__(self, feature=None, condition=None, parent=None):
         self.parent = parent
-        self.feature = feature
+        self.features = feature
         self.condition = condition
         self.children = []
 
     def add_child(self, node):
-        #if node in self.children:
-        #    raise DuplicatedChild('Duplicate child child')
+        if node in self.children:
+            raise DuplicatedChild('Duplicate child child')
         if node:
             node.parent = self
         self.children.append(node)
@@ -33,22 +33,24 @@ class TreeNode(object):
         return new_node
 
     def __repr__(self):
-        return "<Node f:%s c:%s>" % (self.feature, self.condition)
+        return "<Node f:%s c:%s>" % (self.features, self.condition)
+
+    def __str__(self):
+        return "<Node f:%s c:%s>" % (self.features, self.condition)
 
 class DecisionTree(object):
     def __init__(self, inputdata):
         self.root = TreeNode()
         self.inputdata = inputdata
-        self.feature = inputdata[0]
+        self.features = inputdata[0]
         self.data = inputdata[1:]
         self.m, self.n = shape(inputdata)
-        self.restfeature = inputdata[0]
         self.RESULT = self.n - 1
 
     def entropy(self, p):
         return 0 if p==0 else -p * np.log2(p)
 
-    def sum_entropy(self, data):
+    def total_entropy(self, data):
         m, n = shape(data)
         uniques = np.unique(data[:, self.RESULT])
         e = 0
@@ -57,41 +59,34 @@ class DecisionTree(object):
             e += self.entropy(count/m)
         return e
 
-    def count(self, data, feature):
+    def total_part(self, data, feature):
         m, n = shape(data)
-        ss = np.unique(data[:, feature])
-        uniques = np.unique(data[:, self.RESULT])
+        featureunique = np.unique(data[:, feature])
+        resultuniques = np.unique(data[:, self.RESULT])
         allsum = 0
-        for s in ss:
-            a = data[ data[:, feature]==s]
-            am, an = shape(a)
+        for fu in featureunique:
+            partdata = data[data[:, feature]==fu]
+            pdm, _ = shape(partdata)
             partsum = 0
-            for u in uniques:
-                cm, cn = shape(a[a[:, self.RESULT]==u])
-                partsum = partsum - self.entropy(cm/am)
-            allsum = allsum - (am/m*partsum)
+            for u in resultuniques:
+                rum, _ = shape(partdata[partdata[:, self.RESULT]==u])
+                partsum = partsum - self.entropy(rum/pdm)
+            allsum = allsum - (pdm/m*partsum)
         return allsum
 
     def infogain(self, data):
         m, n = shape(data)
-        s = self.sum_entropy(data)
-        ds = [s-self.count(data,i) for i in range(n-1)]
+        s = self.total_entropy(data)
+        ds = [s-self.total_part(data,i) for i in range(n-1)]
         maxfeature = np.array(ds).argmax()
         featurevalues = np.unique(data[:, maxfeature])
         return maxfeature, featurevalues
 
     def create_node(self, data, feature=None, featurevalue=None):
-        print '-----------------------------------------------------------'
-        print data
-        print feature, featurevalue
-        print len(np.unique(data[:, self.RESULT]))
-        node = TreeNode() if feature==None else TreeNode(self.feature[feature], featurevalue)
+        node = TreeNode() if feature==None else TreeNode(self.features[feature], featurevalue)
         if len(np.unique(data[:, self.RESULT])) == 1:
-            print node
             return node
         mf, nfvs = self.infogain(data)
-        print self.feature[mf], nfvs
-        print node
         for nfv in nfvs:
             child = self.create_node(data[data[:, mf]==nfv], mf, nfv)
             node.add_child(child)
@@ -100,17 +95,27 @@ class DecisionTree(object):
     def create_tree(self):
         self.root = self.create_node(self.data)
 
-    def display(self):
+    def prune(self):
+        pass
+
+    def display(self, node=None, indent=''):
+        if not node:
+            return None
+        print indent + str(node)
+        for c in node.children:
+            self.display(c,indent + '  ')
+        '''
         from collections import deque
         queue = deque()
-        queue.append(self.root)
+        queue.append(node)
         while queue:
             node = queue.popleft()
             if not node:
                 continue
-            print node
+            print indent + ' ' + str(node)
             for c in node.children:
                 queue.append(c)
+        '''
 
 class Test(unittest.TestCase):
     def test(self):
@@ -127,7 +132,7 @@ class Test(unittest.TestCase):
                         ['Urgent','No','No','Study']])
         dt = DecisionTree(data)
         dt.create_tree()
-        #dt.display()
+        dt.display(dt.root)
 
 if __name__ == '__main__':
     unittest.main()
