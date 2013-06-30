@@ -2,9 +2,10 @@ import unittest
 
 import numpy as np
 
-from MLhelp import shape, distance,  get_randomseed, distance
+from MLhelp import shape, get_randomseed, distance
 
 from silhouette import Silhouette as sh
+
 
 class KMeans(object):
     centroid = None
@@ -18,7 +19,8 @@ class KMeans(object):
     def train(cls, data, k=3, itercount=60):
         m, n = shape(data)
         category = np.zeros((m, 1))
-        cls.centroid = np.array([[5, 3, 5, 1,], [4, 3,1,1],[ 5,3, 1,0]])
+        cls.centroid = np.array([[5, 3, 5, 1], [4, 3, 1, 1], [5, 3, 1, 0]])
+        #cls.centroid = get_randomseed(data, (k, n))
         cls.k = k
 
         '''
@@ -32,10 +34,9 @@ class KMeans(object):
         scoretable = np.zeros((m, k))
         old_centroid = None
 
-
         count = 0
-        while not np.array_equal(old_centroid, cls.centroid) and\
-                 count<itercount:
+        while not np.array_equal(old_centroid, cls.centroid) and \
+            count < itercount:
             old_centroid = cls.centroid.copy()
             count += 1
 
@@ -43,7 +44,7 @@ class KMeans(object):
                 scoretable[:, c] = distance(data, cls.centroid[c, :])
 
             #check the number of group
-            group =  scoretable.argmin(axis=1)
+            group = scoretable.argmin(axis=1)
             if len(np.unique(group)) != cls.k:
                 cls.centroid = get_randomseed(data, (k, n))
                 continue
@@ -51,7 +52,7 @@ class KMeans(object):
 
             for c in range(k):
                 cls.centroid[c, :] = \
-                        cdata[np.where(cdata[:,-1]==c)].mean(axis=0)[:-1]
+                        cdata[np.where(cdata[:, -1]==c)].mean(axis=0)[:-1]
 
         cls.assigneddata = cdata
 
@@ -60,7 +61,7 @@ class KMeans(object):
         return sh.score(cls.assigneddata)
 
     @classmethod
-    def assigngroup(data, k=0, centroid=None):
+    def assigngroup(cls, data, k=0, centroid=None):
         m, n = shape(data)
         category = np.zeros((m, 1))
         scoretable = np.zeros((m, k))
@@ -69,7 +70,6 @@ class KMeans(object):
             cls.centroid = centroid
         if k:
             cls.k = k
-
         cdata = np.hstack((data, category))
 
         for c in range(cls.k):
@@ -88,12 +88,13 @@ class KMeans(object):
         print sorted(result.items(), reverse=True)
         return sorted(result.items(), reverse=True)[0][1]
 
+
 class Test(unittest.TestCase):
     def test_kmeans(self):
         from sklearn.datasets import load_iris
         iris = load_iris()
         data = iris.data
-        target = iris.target
+        #target = iris.target
         #KMeans.train(data, k=3)
         KMeans.match(data, k=3)
         self.assertEquals(1, KMeans.score())
@@ -115,4 +116,4 @@ class Test(unittest.TestCase):
         '''
 
 if __name__ == '__main__':
-    unittest.main ()
+    unittest.main()

@@ -1,18 +1,16 @@
 import unittest
 import numpy as np
+from MLhelp import shape
 
-
-class Name(object):
-    def __init__(self, k=4):
-        self.k = k
-
-    def train(self, data, k=4):
+class Bagging(object):
+    def __init__(self):
         pass
 
     @classmethod
-    def call(cls):
+    def train(cls, data, model, m=5):
+        _, n = shape(data)
+        np.random.randint(0, n, (m, n))
         pass
-
 
 class Test(unittest.TestCase):
     def a_test_iris(self):
@@ -21,7 +19,7 @@ class Test(unittest.TestCase):
         data = iris.data
         normalised_data = normalise(data)
         self.assertEquals(100, mlp.score(normalised_data, target))
-        self.assertEquals([[0, 0, 1]], mlp.predict(np.array([[5, 5, 5, 2]])))
+        self.assertEquals([[0, 0, 1]], mlp.predict(np.array([[5,5,5,2]])))
 
 if __name__ == '__main__':
     unittest.main()

@@ -1,17 +1,20 @@
 from __future__ import division
+from collections import deque
 import unittest
 import numpy as np
 from MLhelp import shape
-from tree import Tree, TreeNode
+
 
 class DuplicatedChild(Exception):
     pass
 
+
 class TreeNode(object):
-    def __init__(self, feature=None, condition=None, parent=None):
+    def __init__(self, feature=None, condition=None, cate=None, parent=None):
         self.parent = parent
-        self.features = feature
+        self.feature = feature
         self.condition = condition
+        self.cate = cate
         self.children = []
 
     def add_child(self, node):
@@ -32,11 +35,10 @@ class TreeNode(object):
         self.add_child(new_node)
         return new_node
 
-    def __repr__(self):
-        return "<Node f:%s c:%s>" % (self.features, self.condition)
-
     def __str__(self):
-        return "<Node f:%s c:%s>" % (self.features, self.condition)
+        return "<Node f:%s c:%s cate:%s>" % (self.feature, self.condition,
+                self.cate)
+
 
 class DecisionTree(object):
     def __init__(self, inputdata):
@@ -83,8 +85,11 @@ class DecisionTree(object):
         return maxfeature, featurevalues
 
     def create_node(self, data, feature=None, featurevalue=None):
-        node = TreeNode() if feature==None else TreeNode(self.features[feature], featurevalue)
+        #node = TreeNode() if feature==None else TreeNode(self.features[feature], featurevalue)
+        node = TreeNode() if feature==None else TreeNode(feature, featurevalue)
         if len(np.unique(data[:, self.RESULT])) == 1:
+            #return node
+            node.cate = np.unique(data[:, self.RESULT])[0]
             return node
         mf, nfvs = self.infogain(data)
         for nfv in nfvs:
@@ -98,12 +103,27 @@ class DecisionTree(object):
     def prune(self):
         pass
 
+    def predict(self, data):
+        queue = deque()
+        for c in self.root.children:
+            queue.append(c)
+        while queue:
+            node = queue.popleft()
+            if not node:
+                continue
+            if data[node.feature] == node.condition:
+                if not node.children:
+                    return node.cate
+                for c in node.children:
+                    queue.append(c)
+        return None
+
     def display(self, node=None, indent=''):
         if not node:
             return None
         print indent + str(node)
         for c in node.children:
-            self.display(c,indent + '  ')
+            self.display(c, indent + '  ')
         '''
         from collections import deque
         queue = deque()
@@ -116,6 +136,7 @@ class DecisionTree(object):
             for c in node.children:
                 queue.append(c)
         '''
+
 
 class Test(unittest.TestCase):
     def test(self):
@@ -132,7 +153,12 @@ class Test(unittest.TestCase):
                         ['Urgent','No','No','Study']])
         dt = DecisionTree(data)
         dt.create_tree()
-        dt.display(dt.root)
+        #dt.display(dt.root)
+        data = ['Near','Yes','Yes']
+        self.assertEquals('Party', dt.predict(data))
+        data = ['Near','No','No']
+        self.assertEquals('Study', dt.predict(data))
+
 
 if __name__ == '__main__':
     unittest.main()
