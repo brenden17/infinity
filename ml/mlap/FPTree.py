@@ -3,6 +3,7 @@ from collections import OrderedDict
 import unittest
 import numpy as np
 
+
 class DuplicatedChild(Exception):
     pass
 
@@ -28,9 +29,8 @@ class TreeNode(object):
         node.parent = None
         self.children.remove(node)
 
-    #################
-    def create_child(self, feature, condition):
-        new_node = TreeNode(self, feature, condtion)
+    def create_child(self, item=-1, count=1, link=None, parent=None):
+        new_node = TreeNode(item, count, link, parent=self)
         self.add_child(new_node)
         return new_node
 
@@ -75,22 +75,35 @@ class FPTree(object):
 
     def train(self):
         for data in self.ordered_data:
+            node = self.root
             for item in data:
-                self.create_node(self.root, item)
+                node = self.create_node(node, item)
 
     def create_node(self, node, item):
         for c in node.children:
             if c.item == item:
                 c.count += 1
-                return self.create_node(c, item)
+                return c
+        link = self.hashtable[item] if self.hashtable[item] else None
+        newnode = node.create_child(item, 1, link)
+        self.hashtable[item] = newnode
+        return newnode
 
-        treenode = TreeNode(item, 1)
-        link = self.hashtable[item]
-        if link:
-            treenode.link = link
-        self.hashtable[item] = treenode
-        node.add_child(treenode)
-        return treenode
+    def generate_frequent_pattern(self, item):
+        node = self.hashtable.get(item)
+        l = [node]
+        while node.link:
+            node = node.link
+            l.append(node)
+
+        setlist = list()
+        for n in l:
+            s = set()
+            while n.parent:
+                n = n.parent
+                s.add(n)
+            setlist.append(s)
+        return reduce(lambda x, y: x&y, setlist) - {self.root} | {node}
 
     def display(self, node=None, indent=''):
         if not node:
@@ -115,6 +128,9 @@ class Test(unittest.TestCase):
         fptree = FPTree(data)
         fptree.train()
         fptree.display(fptree.root)
+        fptree.generate_frequent_pattern(3)
+        fptree.generate_frequent_pattern(4)
+        fptree.generate_frequent_pattern(5)
         #self.assertEquals([[0, 0, 1]], mlp.predict(np.array([[5,5,5,2]])))
 
 if __name__ == '__main__':
