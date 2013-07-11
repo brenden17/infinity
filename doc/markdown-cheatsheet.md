@@ -1,5 +1,4 @@
 # Markdown cheatsheet
-from [here](http://warpedvisions.org/projects/markdown-cheat-sheet/)
 
 # Header 1 #
 ## Header 2 ##
