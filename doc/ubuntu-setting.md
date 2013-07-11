@@ -13,6 +13,7 @@ $sudo apt-get install subversion
 ~~~
 
 * mercurial
+* 
 ~~~
 $sudo apt-get install mercurial
 ~~~
