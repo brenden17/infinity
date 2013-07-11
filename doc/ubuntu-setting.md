@@ -1,20 +1,26 @@
 # Ubuntu setting
 
 * vim
-    $sudo apt-get install vim
-
+~~~
+$sudo apt-get install vim
+~~~
 * svn
-    $sudo apt-get install subversion
-
+~~~
+$sudo apt-get install subversion
+~~~
 * mercurial
-    $sudo apt-get install mercurial
-
+~~~
+$sudo apt-get install mercurial
+~~~
 * git
-    $sudo apt-get install git
-
+~~~
+$sudo apt-get install git
+~~~
 * virtualenv
-    $sudo apt-get install python-virtualenv
-
+~~~    
+$sudo apt-get install python-virtualenv
+~~~
 * django
-    $pip install django
-
+~~~
+$pip install django
+~~~
