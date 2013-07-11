@@ -1,4 +1,5 @@
 Cython==0.18
+Django==1.5.1
 PIL==1.1.7
 Pattern==2.4
 Pillow==1.7.8
@@ -8,12 +9,14 @@ biopython==1.61
 boto==2.6.0
 distribute==0.6.24
 h5py==2.1.1
+httplib2==0.8
 ipython==0.13.1
 matplotlib==1.1.1
 mrjob==0.3.5
 nltk==2.0.4
 numexpr==2.0.1
 numpy==1.6.2
+oauth2==1.5.211
 pandas==0.9.1
 python-dateutil==2.1
 pytz==2012h
@@ -25,4 +28,5 @@ six==1.2.0
 sympy==0.7.2
 tables==2.4.0
 tornado==2.4
+tweepy==2.0
 wsgiref==0.1.2

@@ -19,8 +19,7 @@ class TreeNode(object):
     def add_child(self, node):
         if node in self.children:
             raise DuplicatedChild('Duplicate child child')
-        if node:
-            node.parent = self
+        node.parent = self
         self.children.append(node)
 
     def remove_child(self, node):
@@ -67,11 +66,8 @@ class FPTree(object):
         return dict(map(lambda x: (x, None), highfrequent))
 
     def order_data(self):
-        ordered_data = list()
         highfrequent = self.count_item()
-        for d in self.data:
-            ordered_data.append([i for i in highfrequent if i in d])
-        return ordered_data
+        return [[i for i in highfrequent if i in d] for d in self.data]
 
     def train(self):
         for data in self.ordered_data:
