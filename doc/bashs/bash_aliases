@@ -16,3 +16,13 @@ alias inf='cd ~/workspace/infinity && so && cd infinity'
 alias ff='firefox&'
 alias eixt='exit'
 alias et='exit'
+alias data='cd /media/sda3/data'
+
+gitcifn()
+{
+    git add . && git commit -a -m $1 && git push origin master
+}
+alias gitci=gitcifn
+
+alias d='df -h'
+alias aws='ssh -i ~/13VAYD34ZAJ4S1Q3P482.pem ubuntu@50.112.133.146'
