@@ -1,13 +1,17 @@
 # Ubuntu setting
 
 * vim
+
 ~~~
 $sudo apt-get install vim
 ~~~
+
 * svn
+
 ~~~
 $sudo apt-get install subversion
 ~~~
+
 * mercurial
 ~~~
 $sudo apt-get install mercurial
