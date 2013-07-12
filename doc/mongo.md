@@ -115,7 +115,7 @@ $mongo dummy.js
 ~~~
 
 # [mongoengine](http://mongoengine.org/) for Python
-I hate handling raw sql operations(including nosql). ORM or Object in databse provide many handy thing. Django ORM can make me comfortable as choosing many different database system such as sqlite3, mysql, even mongodb. When I have to choose one of that kind of database system, I will use Django ORM. I have right to pick up my favorite one, I will mongoengine which provides various functionalities and handling objects as data. Even it supports Django database. 
+I hate handling raw sql operations(including nosql). ORM or Object in databse provide many handy things. Django ORM can make me comfortable as choosing many different database systems such as sqlite3, mysql, even mongodb. When I have to choose one of that kind of database systems, I will use Django ORM. I have right to pick up my favorite one, I will pick up mongoengine which provides various functionalities and handling objects as data. Even it supports Django database.
 
 * install
 
