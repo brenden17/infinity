@@ -101,7 +101,7 @@ var reduce = function(key, values) {
 };
 
 var op = db.comments.mapReduce(map, reduce, {out:'resutl'})
-~~
+~~~
 
 * running javascript file on mongodb
 
@@ -117,7 +117,7 @@ while(c.hasNext()){
 
 ~~~
 
-run on mongodb. ref-methods](http://docs.mongodb.org/manual/reference/method/)
+run on mongodb. ref-[methods](http://docs.mongodb.org/manual/reference/method/)
 
 ~~~
 $mongo dummy.js
