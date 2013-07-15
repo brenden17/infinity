@@ -46,6 +46,7 @@ db.collection.insert({x:1})
 db.collection.update({x:1}, {$set:{y:'b'}})
 db.collection.remove({x:1, y:'b'})
 db.collection.remove() // delete all documents
+db.collection.drop() // drop collection
 ~~~
 
 * conditional operations($lt, $gt, $lte, $gte, $in, $nin, $not)
