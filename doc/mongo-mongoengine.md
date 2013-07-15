@@ -10,7 +10,7 @@ $mongo
 * select db and get cursor
 
 ~~~
-showdbs
+show dbs
 use mydb
 show collections
 db.collectiosn.find()
@@ -18,6 +18,14 @@ db.collectiosn.find()
 var c = db.collection.find()
 while(c.hasNext()) printjson(c.next())
 printjson(c[1])
+~~~
+
+* remove database
+
+~~~
+show dbs
+use mydb
+db.dropDatabase()
 ~~~
 
 * find document ($or, $and) 
@@ -37,6 +45,7 @@ db.collection.find().sort({x:1, y:-1}) //ascending:-1, descending:1
 db.collection.insert({x:1})
 db.collection.update({x:1}, {$set:{y:'b'}})
 db.collection.remove({x:1, y:'b'})
+db.collection.remove() // delete all documents
 ~~~
 
 * conditional operations($lt, $gt, $lte, $gte, $in, $nin, $not)
@@ -92,7 +101,7 @@ var reduce = function(key, values) {
 };
 
 var op = db.comments.mapReduce(map, reduce, {out:'resutl'})
-~~~
+~~
 
 * running javascript file on mongodb
 
