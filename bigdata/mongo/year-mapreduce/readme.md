@@ -1,4 +1,4 @@
-# Simple toy Monogdb mapReduce
+# Simple toy with Monogdb mapReduce
 
 Suppose that I have my own business which is so small but deals with big money. I have been writing down financial book by myself since Jaunary of 2011. Today I want to know the months expension between 2011 and 2012.
 
