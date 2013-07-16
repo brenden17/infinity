@@ -23,7 +23,7 @@ var yearReduce = function(key, values){
 };
 
 var db = setup();
-var year1112 = db.daily_balance.mapReduce(yearMap, yearReduce, {out:'year'});
+var year = db.daily_balance.mapReduce(yearMap, yearReduce, {out:'year'});
 
 var compareYearMap = function(){
     var k = '2011-2012-' + this._id.split('-')[1];
