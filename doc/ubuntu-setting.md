@@ -31,7 +31,8 @@ $sudo apt-get install python-virtualenv
 ~~~
 
 * pip on ubuntu12.04
-try to type it without sudo then when you have permission error then use sudo. 
+
+try to type it without sudo when you have permission error then use sudo. 
 
 ~~~
 $sudo apt-get update
