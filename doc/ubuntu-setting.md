@@ -32,6 +32,7 @@ $sudo apt-get install python-virtualenv
 
 * pip on ubuntu12.04
 try to type it without sudo then when you have permission error then use sudo. 
+
 ~~~
 $sudo apt-get update
 sudo apt-get install build-essential python-dev libfreetype6-dev libpng-dev
@@ -56,6 +57,7 @@ $sudo pip install tweepy
 * mongodb
 
 [mongoengine](http://mongoengine.org), [tutorial](docs.mongoengine.org/en/latest/tutorial.htmlk)
+
 ~~~
 $sudo apt-get install mongo
 $pip install mongoengine
