@@ -1,8 +1,8 @@
 #! /usr/bin/env python
 """
-This script is to upload md format file to blog on wordpress.
+This script is to upload md formatted file to blog on wordpress.
 
-required
+Required
  - http://python-wordpress-xmlrpc.readthedocs.org/
  - https://github.com/trentm/python-markdown2
 """
@@ -13,10 +13,11 @@ from wordpress_xmlrpc import Client, WordPressPost
 from wordpress_xmlrpc.methods.posts import NewPost, EditPost
 
 def get_userinfo():
-    filename = '../../mine.txt'
+    filename = '../../../mine.txt'
     with open(filename) as f:
         doc = f.read().strip()
-        userinfo = {line.split(':')[0]:line.split(':')[1] for line in doc.split('\n')}
+        sf = lambda line, index:line.split(':')[index]
+        userinfo = {sf(line, 0):sf(line, 1) for line in doc.split('\n')}
     return userinfo
 
 def readmd(filename):
@@ -25,7 +26,7 @@ def readmd(filename):
         return txt
 
 def convert_md2html(txt):
-    return markdown(txt) 
+    return markdown(txt)
 
 def upload(htmltxt):
     blog = 'http://brenden17.wordpress.com/xmlrpc.php'
@@ -33,9 +34,10 @@ def upload(htmltxt):
     username = userinfo.get('wordpress-id', '')
     pw = userinfo.get('wordpress-pw', '')
     doc = htmltxt.split('\n')
-    title = doc[0]
-    content = '\n'.join(doc[1:])
     try:
+        title = doc[0]
+        content = '\n'.join(doc[1:])
+
         wp = Client(blog, username, pw)
         post = WordPressPost()
         post.title = title
@@ -51,4 +53,4 @@ if __name__ == '__main__':
     txt = readmd(filename)
     htmltxt = convert_md2html(txt)
     upload(htmltxt)
-    print 'Done'
+    print '==== Done ===='
