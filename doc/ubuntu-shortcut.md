@@ -6,4 +6,3 @@ from [here](https://help.ubuntu.com/community/KeyboardShortcuts), [here](http://
 * alt + f7 : move the current window
 * alt + f8 : resize current window
 
-

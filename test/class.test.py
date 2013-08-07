@@ -7,6 +7,7 @@ class Parent(object):
         print '== self method ================================'
         try:
             print 'print ' + self.name
+            print '__class__ print ' + self.__class__.CLASS_STRING
         except Exception, e:
             print '*** Not access to self in self method'
             print str(e)
@@ -141,7 +142,6 @@ class Test(object):
     '''
 
 if __name__ == '__main__':
-    '''
     print '## Parent #######################'
     p = Parent()
     p.self_call('')
@@ -162,6 +162,7 @@ if __name__ == '__main__':
     c.self_caller('')
     c.class_caller('')
     CallClass.class_caller('')
+    '''
 
     '''
     c = Test()

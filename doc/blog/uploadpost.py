@@ -14,14 +14,14 @@ from markdown2 import markdown
 from wordpress_xmlrpc import Client, WordPressPost
 from wordpress_xmlrpc.methods.posts import NewPost, EditPost
 
-MAINFILE = '../../../mine.txt'
+MINEFILE = '../../../mine.txt'
 BIFILE = './blog.ini'
 BLOG = 'http://brenden17.wordpress.com/xmlrpc.php'
 WPID = 'wordpress-id'
 WPPW = 'wordpress-pw'
 
 def get_userinfo():
-    with open(MAINFILE) as f:
+    with open(MINEFILE) as f:
         doc = f.read().strip()
         sf = lambda line, index:line.split(':')[index].strip()
         userinfo = {sf(line, 0):sf(line, 1) for line in doc.split('\n')}
