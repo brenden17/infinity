@@ -29,8 +29,3 @@ class Word(me.Document):
 class Link(me.Document):
    url= me.StringField(required=True, unique=True)
    status = me.ListField(me.ReferenceField(Status))
-
-
-
-   
-

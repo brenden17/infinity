@@ -24,8 +24,11 @@ def get_data_by_pd(rawdata):
     df = pd.read_csv(StringIO(rawdata), header=None, delimiter='\t')#, dtype=object)
     df.columns = ['a', 'b']
     df = df.dropna()
-    df.plot()
+    #df.plot()
+    #pl.show()
     return df
+
+
 
 if __name__ == '__main__':
     #print loadzipdata('01', 'web_traffic.tsv')
