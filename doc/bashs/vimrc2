@@ -16,7 +16,9 @@ filetype plugin indent on
 " The rest of your config follows here
 map <F2> :NERDTreeToggle<CR>
 map d4 d$
-map z :wq
+map z :w
+map zz :wq
+autocmd BufRead *.py nmap <Insert> :!python %<CR>
 
 " vimrc file for following the coding standards specified in PEP 7 & 8.
 "
@@ -37,15 +39,15 @@ map z :wq
 
 " Number of spaces that a pre-existing tab is equal to.
 " For the amount of space used for a new tab use shiftwidth.
-au BufRead,BufNewFile *py,*pyw,*.c,*.h,*pyx set tabstop=4
-au BufRead,BufNewFile *py,*pyw,*.c,*.h,*pyx set nu
+au BufRead,BufNewFile *py,*pyw,*.c,*.h,*pyx,*.js,*txt,*.sh set tabstop=4
+au BufRead,BufNewFile *py,*pyw,*.c,*.h,*pyx,*.js,*.md,*txt,*.sh set nu
 
 " What to use for an indent.
 " This will affect Ctrl-T and 'autoindent'.
 " Python: 4 spaces
 " C: tabs (pre-existing files) or 4 spaces (new files)
-au BufRead,BufNewFile *.py,*pyw,*pyx set shiftwidth=4
-au BufRead,BufNewFile *.py,*.pyw,*pvx set expandtab
+au BufRead,BufNewFile *.py,*pyw,*pyx,*txt,*.sh set shiftwidth=4
+au BufRead,BufNewFile *.py,*.pyw,*pvx,*txt,*.sh set expandtab
 fu Select_c_style()
     if search('^\t', 'n', 150)
         set shiftwidth=8
@@ -85,7 +87,7 @@ au BufRead,BufNewFile *.c,*.h set formatoptions-=c formatoptions-=o formatoption
 " line endings.
 " Python: yes
 " C: yes
-au BufNewFile *.py,*.pyw,*.c,*.h,*.pyx set fileformat=unix
+au BufNewFile *.py,*.pyw,*.c,*.h,*.pyx,*txt,*.sh set fileformat=unix
 
 
 " ----------------------------------------------------------------------------
@@ -106,4 +108,3 @@ au BufNewFile *.py,*.pyw,*.c,*.h,*.pyx set fileformat=unix
 " Keep indentation level from previous line: ``set autoindent``
 
 " Folding based on indentation: ``set foldmethod=indent``
-autocmd BufRead *.py nmap <Insert> :!python %<CR>
