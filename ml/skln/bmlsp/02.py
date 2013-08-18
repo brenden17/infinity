@@ -35,11 +35,15 @@ def resolve():
                                         feats__k=k,
                                         svm__degree=degree,
                                         svm__gamma=gamma,
+                                        #svm__kernel=['rbf', 'linear'],
                                         svm__C=c))
 
     estimator.fit(data, target)
     print(estimator.score(data, target))
+
     print(estimator.best_estimator_)
+    print(estimator.best_score_)
+    print(estimator.best_params_)
 
     print('===== preprocessing : pca with SVM =====')
     pca = PCA()
@@ -50,38 +54,32 @@ def resolve():
     estimator = GridSearchCV(pipe, dict(pca__n_components=n_components,
                                         svm__degree=degree,
                                         svm__gamma=gamma,
+                                        #svm__kernel=['rbf', 'linear'],
                                         svm__C=c))
 
     estimator.fit(data, target)
     print(estimator.score(data, target))
+
     print(estimator.best_estimator_)
+    print(estimator.best_score_)
+    print(estimator.best_params_)
 
 
-    """
-
-    pipe = Pipeline([('feats', feats), ('svm', clf)])
-    estimator = GridSearchCV(pipe, dict(feats__score_func=[f_regression], feats__k=k))
-
-    estimator.fit(data, target)
-    print estimator.score(data, target)
-
-
-    """
-
-
-    """
-    #clf = KMeans(init='k-means++', n_clusters=3)
-    clf = KMeans(init='random', n_clusters=3)
-    clf.fit(data)
-    print clf.score(data)
-
-
+    print('===== preprocessing : pca with GaussianNB =====')
     from sklearn.naive_bayes import GaussianNB
-    gnb = GaussianNB()
-    gnb.fit(data, target)
-    print gnb.score(data, target)
-    """
+    clf = GaussianNB()
+    feats = SelectKBest()
+    k = [1, 2, 6, 7]
+    pipe = Pipeline([('feats', feats), ('gnb', clf)])
+    estimator = GridSearchCV(pipe, dict(feats__score_func=[f_regression], 
+                                        feats__k=k,
+                                        ))
+    estimator.fit(data, target)
+    print(estimator.score(data, target))
 
+    print(estimator.best_estimator_)
+    print(estimator.best_score_)
+    print(estimator.best_params_)
 
 if __name__ == '__main__':
     resolve()
