@@ -1,0 +1,7 @@
+Sympy
+
+[sourcecode language="python"]
+import collections
+l = iter([1, 2, 3])
+isinstance(l, collections.Iterable) #True
+[/sourcecode]

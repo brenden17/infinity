@@ -1,14 +1,17 @@
-#Python
+##Python
+ * pandas
+ * sklearn
+ * nltk
+ * pytable
+ * numpy and scipy
 
-* Algorithm
+
+## Mongodb
+ * pymongo
+ * mongoengine
+
+
+## Algorithm
  * Sort 
  * Tree
  * Graph
-
-* Bigdata
- * pandas - http://pandas.pydata.org/
- * mrJob - http://github.com/Yelp/mrjob
- * sklearn - http://scikit-learn.org/
-
-* Doc
- * ipython
