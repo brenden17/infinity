@@ -9,11 +9,18 @@ from sklearn.feature_selection import SelectKBest, f_regression
 from sklearn.pipeline import Pipeline
 from sklearn.grid_search import GridSearchCV
 from sklearn.decomposition import PCA
+from sklearn.cross_validation import KFold
 
 
 def get_data_by_pd(rawdata):
     df = pd.read_csv(StringIO(rawdata), header=None, delimiter='\t')
     return df
+
+def d(data, target, n_folds=1):
+    kfold = KFold(len(data), n_folds=3)
+
+    for train, test in kfold:
+        yield data[train], target[test]
 
 def resolve():
     print('===== load data =====')
