@@ -1,0 +1,24 @@
+<h1><%= title %></h1>
+
+<form action="/create" method="post" accept-charset="utf-8">
+  <input type="text" name="what" />
+</form>
+
+<% todos.forEach( function(todo){ %>
+  <p>
+	<span>
+	<%= todo.what %>
+	</span>
+	<span>
+	<%= todo.updated_at %></p>
+	</span>
+	<span>
+	<form action="/edit/<%= todo._id %>" method="post" accept-charset="utf-8">
+        <input type="text" name="what" value="<%= todo.what %>" />
+    </form>
+    </span>
+	<span>
+    <a href="/destroy/<%= todo._id %>">Delete</a>
+    </span>
+  </p>
+<% }); %>

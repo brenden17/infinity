@@ -1,10 +1,17 @@
-var http = require('http')
+var application_root = __dirname,
+	express = require('express'),
+	book = require('./routes/book');
 
-var server = http.createServer(function (req, res) {
-	res.writeHead(200, {'Content-Type':'text/plain'});
-	res.end('hello word\n');
-	console.log('come in');
-})
+var app = express();
 
-server.listen(8080, '127.0.0.1');
+app.configure(function() {
+	app.use(express.logger('dev'));
+	app.use(express.bodyParser());
+});
 
+app.get('/book', book.findAll);
+app.get('/book/:id', book.findById);
+app.post('/book', book.create);
+app.put('/book/:id', book.update);
+app.delete('/book/:id', book.delete);
+app.listen(8080);
