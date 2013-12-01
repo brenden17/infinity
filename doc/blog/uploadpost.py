@@ -46,6 +46,10 @@ def readmd(filename):
         txt = f.read()
         return txt
 
+def customize_html(txt):
+    #~~~
+    pass
+
 def convert_md2html(txt):
     return markdown(txt)
 
@@ -97,6 +101,10 @@ def get_args():
     return args.filename, {
             'post_tag' : args.tags,
             'category' : args.cates}
+
+def test_customize_html(filename, option):
+    txt = readmd(filename)
+    htmltxt = convert_md2html(txt)
 
 if __name__ == '__main__':
     filename, options = get_args()

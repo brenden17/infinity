@@ -1,0 +1,31 @@
+Easy to create presentation with pydown
+
+Sometimes I don't want waste my time to make presentation which is not so important. At the first stage, I want to focus on the contents, do not care about font'size, font style etc.
+
+Today I checked out [pydown](http://github.com/isnowfy/pwdown)
+
+[sourcecode language="python"]
+pip install python-pydown
+[/sourcecode]
+
+and then edit slide.md.
+
+[sourcecode language="python"]
+!SLIDE
+
+# Hello
+
+!SLIDE
+
+# Another slide
+
+!SLIDE left
+
+# left
+[/sourcecode]
+
+lastly, generate it. That's all.
+
+[sourcecode language="python"]
+pydwon slide.md slides
+[/sourcecode]

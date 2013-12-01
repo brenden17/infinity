@@ -27,6 +27,8 @@ $sudo apt-get install git
 * virtualenv
 
 ~~~    
+$sudo apt-get install python-setuptools
+$sudo apt-get install easy_install pip
 $sudo apt-get install python-virtualenv
 ~~~
 
@@ -36,7 +38,7 @@ try to type it without sudo when you have permission error then use sudo.
 
 ~~~
 $sudo apt-get update
-sudo apt-get install build-essential python-dev libfreetype6-dev libpng-dev
+$sudo apt-get install build-essential python-dev libfreetype6-dev libpng-dev
 
 $sudo pip install numpy
 $sudo pip install matplotlib
