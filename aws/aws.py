@@ -6,7 +6,7 @@ tokyo = 'ap-northeast-1'
 aws = sys.argv[0].split('/')[-1].split('.')[0]
 arg = sys.argv[1]
 
-if arg not in ['stop', 'start']:
+if arg not in ['stop', 'start', 'status']:
     print('Wrong arguments')
     sys.exit()
 
@@ -22,5 +22,8 @@ for inst in insts:
             elif arg == 'start' and ins.state == 'stopped':
                 ins.start()
                 print('aws starts')
+            elif arg == 'status':
+                pass
+
             else:
                 print('Something Wrong~~')

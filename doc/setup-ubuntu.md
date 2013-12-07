@@ -37,24 +37,20 @@ $sudo apt-get install python-virtualenv
 try to type it without sudo when you have permission error then use sudo. 
 
 ~~~
-$sudo apt-get update
-$sudo apt-get install build-essential python-dev libfreetype6-dev libpng-dev
+# sudo apt-get install build-essential python-dev python-numpy python-setuptools python-scipy libatlas-dev
+# sudo apt-get install python-matplotlib
+# sudo pip install scikit-learn
 
-$sudo pip install numpy
-$sudo pip install matplotlib
+# pip install numpy
+# pip install scipy
+# pip install scikit-learn
 
-$sudo apt-get install libatlas-base-dev gfortran 
-$sudo pip install scipy
+# pip install libpng-dev libjpeg8-dev libfreetype6-dev
+# pip install matplotlib
 
-$sudo pip install scikit-learn
-
-$sudo pip install PIL
-
-$sudo pip install nltk
-$sudo pip install django
-$pip install ipython
-$sudo pip install ipython
-$sudo pip install tweepy
+# pip install ipython
+# pip install tornado
+# pip install pyzmq
 ~~~
 
 * mongodb
