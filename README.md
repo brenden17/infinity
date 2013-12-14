@@ -4,7 +4,7 @@
  * nltk
  * pytable
  * numpy and scipy
-
+ * unittest
 
 ## Mongodb
  * pymongo
