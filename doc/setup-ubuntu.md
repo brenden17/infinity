@@ -30,6 +30,10 @@ $sudo apt-get install git
 $sudo apt-get install python-setuptools
 $sudo apt-get install easy_install pip
 $sudo apt-get install python-virtualenv
+
+$mkdir foldname
+$cd foldname
+$virtualenv --no-site-packages --distribute dist
 ~~~
 
 * pip on ubuntu12.04
