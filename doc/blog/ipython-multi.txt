@@ -1,0 +1,28 @@
+multi cores
+
+컴퓨터의 멀터코어에 코드를 분산시키는 몇가지 단계가 있다.
+1. IPython 엔진 가동
+2. 엔진에 대리자로 행동하는 Client는 생성
+3. 엔진에 태스크를 실행하기 위해 Client는 사용과 결과 검색
+
+동기와 비동기로 실행가능하다.
+
+cpu 정보를 얻기 위해 다음 명령어를 실행한다.
+$cat /proc/cpuinfo
+
+엔진을 시작
+$ipcluster -n [엔진수]
+$ipcluster -h
+$ipcluster -n 2
+
+Client 인스턴스를 만들기
+client는 엔진에 태스크를 보내는 일을 한다. 
+
+
+ 
+
+[sourcecode language="python"]
+import collections
+l = iter([1, 2, 3])
+isinstance(l, collections.Iterable) #True
+[/sourcecode]

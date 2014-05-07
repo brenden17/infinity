@@ -1,0 +1,12 @@
+df.price와 df[['price']와 차이
+
+df = DataFrame({...})에서
+df.price와 df['price']  
+
+my story
+
+[sourcecode language="python"]
+import collections
+l = iter([1, 2, 3])
+isinstance(l, collections.Iterable) #True
+[/sourcecode]

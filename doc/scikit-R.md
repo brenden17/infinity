@@ -1,0 +1,61 @@
+!SLIDE
+## Python and R for Machine Learning (#1)
+### 기계 학습이란
+**Machine learning**, a branch of artificial intelligence, concerns the construction and study of systems that can learn from data - [wikipedia](http://en.wikipedia.org/wiki/Machine_learning)
+
+한마디로, 기계가 데이터를 공부(훈련)하여 *무엇가* 예측함
+
+
+!SLIDE
+## 어디서 들어본거 같은데...
+ * Data Mining
+ * NLP(Natural Language Processing)
+ * Image Processing
+ * Bioinformatics
+
+!SLIDE
+
+> ..... 제가 잘 모르는 면이 있어서, 학구적인 의구심을 갖고 쓰는 글이니 노여워하지 마세요. **데이터 분석을 하는 데 있어서 사람들이 파이썬 파이썬 하는 데에는 이유가 있을 것 같은데, 솔직히 저는 아직 잘 모르겠는데요**.
+그냥, 범용 프로그래밍 언어 치고는 프로그래밍이 정말 쉽다는 것 정도? (이것 때문에 부각되는 것일까요?)
+성능 면에서는 별로 좋지는 않은 퍼포먼스라고 저는 평가를 하고 있고, **차라리 R이나 MATLAB 같은 데이터분석용 스크립트 언어를 쓰는게 차라리 좋다고 보고 있는데**, ..... 진짜 장점은 무엇일까요?
+
+Jaeseong Yoo, Python Korea, Facebook
+
+!SLIDE
+## Python and R
+
+### Python vs R
+**scipy, numpy, matplotlib, pandas '=. R**
+
+### Tools for Machine Learning
+| Method                      | Scikit-Learn          | R package           |
+| --------------------------- |:---------------------:| -------------------:|
+| Nearest Neighbor            | sklearn.neighbors     | knn() in class      |
+| naive Bayes                 | sklearn.naive_bayes   | naiveBayes in e1071 |
+| Support Vector Machines     | sklearn.svm           | svn() in kernl      |
+| k-means                     | sklearn.cluster.kmeans| kmeans() in stats   |
+| ...                         | ...                   | ...                 |
+
+!SLIDE
+## If...
+
+* 나에게 조금 큰 이미지파일이나 MP3 사이트를 분석, 예측하라면? Python
+* 나에게 정규화된 CSV 파일을 분석, 예측하라면? R
+* 나에게 비정규화된 파일 덩어리를 분석, 예측하라면? Hadoop, Pig, Python, R
+* 잘 모르겠다? Python (#2 Next time.)
+
+!SLIDE
+## Reference-1
+### Building Machine Learning System with Python (한국어판)
+![Building Machine Learning System with Python](http://ecx.images-amazon.com/images/I/51kMAMAiMPL.jpg)
+
+### Learning scikit-learn: Machine Learning in Python (Coming Soon)
+![Learning scikit-learn: Machine Learning in Python](http://ecx.images-amazon.com/images/I/51t3OZQ4JcL.jpg)
+
+### Machine Learning in R (Coming Soon)
+![machine learning in r](http://ecx.images-amazon.com/images/I/512qvO%2BjYBL.jpg)
+
+!SLIDE
+## Reference-2
+### On Intelligence(생각하는 뇌, 생각하는 기계)
+![on intelligence](http://ecx.images-amazon.com/images/I/41TDaUFtxeL.jpg)
