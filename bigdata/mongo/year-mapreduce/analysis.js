@@ -5,37 +5,38 @@ var setup = function(){
 };
 
 var yearMap = function(){
-    var year = this.dayat.getFullYear().toString();
-    var month = this.dayat.getMonth() + 1;
-    var k = year.toString() + '-' +  month.toString();
-    //var k = new Array(year, month);// error 
-    var v = this.expense;
-    emit(k, {expense:v});
+    emit({year:this.dayat.getFullYear(), month:this.dayat.getMonth()}, {count:1, expense:this.expense, income:this.income});
 };
 
 var yearReduce = function(key, values){
-    var result = {sumMonth:0};
+	var total = 0;
+    var totalExpense = 0;
+    var totalIncome = 0;
+
     values.forEach(function(value){
-        result.sumMonth += value.expense;
+    	//result.sumMonth += value.expense;
+		total += value.count;
+        totalExpense += value.expense;
+        totalIncome += value.income;
     });
-    result.meanMonth = result.sumMonth / 12;
-    return result;
+    return {count:total, expense:totalExpense, income:totalIncome};
 };
 
 var db = setup();
 var year = db.daily_balance.mapReduce(yearMap, yearReduce, {out:'year'});
 
 var compareYearMap = function(){
-    var k = '2011-2012-' + this._id.split('-')[1];
-    var v = this.value['sumMonth'];
-    emit(k, {month:v});
+    var k = '2011-2012-' + this._id["month"].toString();
+    emit(k, {expense:this.value["expense"], income:this.value["income"]});
 };
 
 var compareYearReduce = function(key, values){
-    var result = {diff:0, percent:0};
-    result.diff = values[0].month - values[1].month;
-    result.percent = (values[0].month - values[1].month)/values[0].month*100;
-    return result;
+	var diffExpense = 0;
+	var diffIncome = 0;
+	 
+    diffExpense = values[0].expense - values[1].expense;
+    diffIncome = values[0].income - values[1].income;
+    return {expense:diffExpense, income:diffIncome};
 };
 
 var compare = db.year.mapReduce(compareYearMap, compareYearReduce, {out:'compare'});

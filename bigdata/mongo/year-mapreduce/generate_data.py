@@ -24,7 +24,7 @@ def create_doc(date, income, expense):
 
 def generate_data():
     sdate = datetime(2011, 01, 01)
-    edate = datetime(2013, 06, 30)
+    edate = datetime(2013, 01, 01)
     day = timedelta(days=1)
     cdate = sdate
     valuerange = (10000, 100000)
@@ -32,7 +32,7 @@ def generate_data():
     while cdate < edate:
         income = randint(*valuerange)
         expense = randint(*valuerange)
-        create_doc(cdate, income, expense)
+        create_doc(cdate, cdate.year, cdate.month, income, expense)
         cdate += day
 
 if __name__ == '__main__':
