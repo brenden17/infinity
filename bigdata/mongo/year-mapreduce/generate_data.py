@@ -32,7 +32,7 @@ def generate_data():
     while cdate < edate:
         income = randint(*valuerange)
         expense = randint(*valuerange)
-        create_doc(cdate, cdate.year, cdate.month, income, expense)
+        create_doc(cdate, income, expense)
         cdate += day
 
 if __name__ == '__main__':
