@@ -35,6 +35,10 @@ var year = db.daily_balance.mapReduce(yearMap, yearReduce, {out:'year'});
 var compare = db.year.mapReduce(compareYearMap, compareYearReduce, {out:'compare'});
 ~~~
 
+run script.
+~~~
+$mongo analysis.js 
+~~~
 Finally, you will see compare collections and 12 document.
 
 
